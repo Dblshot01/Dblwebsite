@@ -1939,6 +1939,10 @@ body:has(.hero2) .hero2__wordmark .hero2__swap,
 body:has(.hero2) .hero2__wordmark .hero__swap {
   color: #8FB2FF;
 }
+body:has(.hero2) .about-page .hero2__wordmark,
+body:has(.hero2) .about-page .hero2__wordmark .hero2__swap {
+  color: #1f3465;
+}
 @media (max-width: 900px) {
   .section {
     padding-block: clamp(3.4rem, 13vw, 5rem);
