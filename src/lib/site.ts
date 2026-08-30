@@ -66,7 +66,7 @@ export const NAV_ITEMS: NavItem[] = [
 export const SOCIAL_LINKS = [
   { label: "Instagram", href: "https://www.instagram.com/dblshot1/" },
   { label: "WhatsApp", href: "https://wa.me/201289772228" },
-  { label: "Facebook", href: "https://www.facebook.com/dblshot" },
+  { label: "Facebook", href: "https://www.facebook.com/doubleshot.agency.eg/" },
   { label: "LinkedIn", href: "https://www.linkedin.com/company/dblshot/" },
-  { label: "YouTube", href: "https://www.youtube.com/@dblshot" },
+  { label: "YouTube", href: "https://www.youtube.com/@Dblshotpeople" },
 ] as const;

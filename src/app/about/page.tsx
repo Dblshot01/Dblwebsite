@@ -2,7 +2,6 @@ import Link from "next/link";
 import { SiteProvider } from "@/components/layout/SiteProvider";
 import { AboutVideo } from "@/components/about/AboutVideo";
 import { LogoHero } from "@/components/ui/LogoHero";
-import { TickerCross } from "@/components/ui/TickerCross";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TeamGrid } from "@/components/ui/TeamGrid";
 import { ABOUT_COPY, JOURNEY, MISSION_VISION, VALUES } from "@/lib/content/about";
@@ -21,15 +20,11 @@ export default function AboutPage() {
       <div className="about-page">
         <LogoHero
           id="about-hero"
-          eyebrow="About Dblshot"
           title={
             <>
               Watch Our <span className="hero2__swap">Story</span>
             </>
           }
-        />
-        <TickerCross
-          items={["Strategy", "FMCG Growth", "E-Commerce", "Amazon Ads", "Branding", "Performance Marketing"]}
         />
 
         <section className="section about-page__intro">

@@ -6,9 +6,9 @@ import { JUNIOR_MARKETER } from "@/lib/content/junior-marketer";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Junior Marketer — Round 3",
+  title: "Junior Marketer — Round 4",
   description:
-    "Round 3 of DBLSHOT's Junior Marketer program — a 5-week launchpad where ambitious juniors (10–15) learn marketing, build a brand, and launch it.",
+    "Round 4 of DBLSHOT's Junior Marketer program — a 5-week launchpad where ambitious juniors (10–15) learn marketing, build a brand, and launch it.",
   path: "/junior-marketer",
 });
 
@@ -50,7 +50,7 @@ export default function JuniorMarketerPage() {
     <SiteProvider innerPage>
       <section className="page-hero">
         <div className="container">
-          <span className="jrm-badge reveal">★ Round 3 · Coming Soon</span>
+          <span className="jrm-badge reveal">★ Round 4 · Coming Soon</span>
           <h1 className="page-hero__title" style={{ marginTop: "1.25rem" }}>
             <span className="reveal-line">
               <span>
@@ -229,7 +229,7 @@ export default function JuniorMarketerPage() {
       </section>
 
       <PageCTA
-        title="Round 3 — Coming Soon"
+        title="Round 4 — Coming Soon"
         description="Places are limited to 15–20 juniors. Get in touch and we'll let you know the moment enrolment opens."
         buttonLabel="Coming Soon"
         buttonHref="/contact"

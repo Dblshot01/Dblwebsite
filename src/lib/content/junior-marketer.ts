@@ -1,5 +1,5 @@
 export const JUNIOR_MARKETER =   {
-    "heroTitle": "Round 3 Is Soon Let Your Marketing Journey Begin",
+    "heroTitle": "Round 4 Is Soon Let Your Marketing Journey Begin",
     "heroSubtitle": "Let Your Marketing Journey Begin",
     "tagline": "It’s not just a course. It’s your launchpad.",
     "intro": "Built for ambitious juniors ready to think bigger and grow faster",
@@ -46,7 +46,7 @@ export const JUNIOR_MARKETER =   {
     ],
     "sections": [
       {
-        "heading": "Round 3 Is Soon Let Your Marketing Journey Begin",
+        "heading": "Round 4 Is Soon Let Your Marketing Journey Begin",
         "paragraphs": []
       },
       {

@@ -747,10 +747,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   align-items: center;
   text-align: center;
 }
-.hero2__logo {
-  width: min(360px, 62vw);
+.hero2__logo--corner {
+  position: absolute;
+  right: clamp(1.25rem, 5vw, 3.5rem);
+  bottom: clamp(1.25rem, 5vw, 3rem);
+  width: min(200px, 32vw);
   height: auto;
-  margin-bottom: 2rem;
+  z-index: 1;
 }
 .hero2--logo .hero2__wordmark { margin-bottom: 0; }
 

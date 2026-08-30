@@ -1564,14 +1564,8 @@ body:has(.hero2) .hero2__wordmark .hero__swap {
   min-height: clamp(27rem, 50vw, 38rem);
   padding-bottom: clamp(3.6rem, 8vw, 5.8rem);
 }
-.about-page .hero2__eyebrow {
-  margin-bottom: 0.1rem;
-}
 .about-page .hero2__wordmark {
   margin-bottom: 0;
-}
-.about-page .ticker-band {
-  margin-block: 0;
 }
 .about-page .section {
   padding-block: clamp(3.25rem, 7vw, 5.8rem);
