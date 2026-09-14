@@ -14,7 +14,7 @@ export function CaseStudyCard({ study }: { study: CaseStudyCardData }) {
           height={400}
           style={
             isContainImage
-              ? { width: "100%", height: "100%", objectFit: "contain", filter: "none", padding: "1.25rem" }
+              ? { width: "100%", height: "100%", objectFit: "contain", filter: "none" }
               : { width: "100%", height: "100%", objectFit: "cover" }
           }
         />
