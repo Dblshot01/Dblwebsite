@@ -8,6 +8,8 @@ export type CaseStudyCard = {
   subtitle: string;
   excerpt: string;
   image: string;
+  /** "contain" renders `image` as a logo mark (no crop/photo filters) instead of a cover photo. */
+  imageFit?: "cover" | "contain";
   logo?: string;
   metrics?: { value: string; label: string }[];
   comingSoon?: boolean;
@@ -16,7 +18,7 @@ export type CaseStudyCard = {
 /** Case studies not yet published — shown as "Coming Soon" and not clickable. */
 const COMING_SOON = new Set<string>([]);
 
-const CARD_META: Record<string, Pick<CaseStudyCard, "image" | "metrics">> = {
+const CARD_META: Record<string, Pick<CaseStudyCard, "image" | "imageFit" | "metrics">> = {
   "isis-organic": {
     image: "/media/case-studies/isis-teas.jpg",
     metrics: [
@@ -50,16 +52,16 @@ const CARD_META: Record<string, Pick<CaseStudyCard, "image" | "metrics">> = {
     ],
   },
   wingo: {
-    // Placeholder: no Wingo-specific asset exists yet. Deliberately a neutral
-    // results card — p12 showed iSiS/Goodsmart branding, i.e. another client's work.
-    image: "/media/case-studies/ecommerce/p21.jpg",
+    image: "/media/case-studies/logos/wingo.png",
+    imageFit: "contain",
     metrics: [
       { value: "65+", label: "Guideline pages" },
       { value: "9+", label: "Product lines" },
     ],
   },
   zeina: {
-    image: "/media/case-studies/ecommerce/p16.jpg",
+    image: "/media/case-studies/logos/zeina.png",
+    imageFit: "contain",
     metrics: [
       { value: "1979", label: "Heritage brand" },
       { value: "AR + EN", label: "Bilingual system" },
@@ -79,7 +81,9 @@ export function getAllCaseStudies(): CaseStudyCard[] {
       excerpt: study.intro.slice(0, 180) + (study.intro.length > 180 ? "…" : ""),
       // Neutral fallback — must not carry any client's branding
       image: meta.image ?? "/media/case-studies/ecommerce/p17.jpg",
-      logo: CASE_STUDY_LOGOS[study.slug],
+      imageFit: meta.imageFit,
+      // Skip the small logo badge when the card image is already the logo itself.
+      logo: meta.imageFit === "contain" ? undefined : CASE_STUDY_LOGOS[study.slug],
       metrics: meta.metrics,
       comingSoon: COMING_SOON.has(study.slug),
     };

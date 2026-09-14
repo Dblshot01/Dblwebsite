@@ -12,8 +12,10 @@ export const metadata = createPageMetadata({
   path: "/case-studies",
 });
 
+const HIDDEN_FROM_LISTING = new Set(["ltf"]);
+
 export default function CaseStudiesPage() {
-  const studies = getAllCaseStudies();
+  const studies = getAllCaseStudies().filter((s) => !HIDDEN_FROM_LISTING.has(s.slug));
 
   return (
     <SiteProvider innerPage>
