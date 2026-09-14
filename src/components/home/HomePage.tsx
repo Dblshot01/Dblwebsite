@@ -79,7 +79,16 @@ export function HomePage() {
           <div className="agency-intro__gallery reveal">
             <div className="bento">
               <div className="bento__tile bento__tile--main">
-                <Image src="/media/case-studies/rehana-golden-rice.jpg" alt="Rehana — a DBLSHOT client" width={1164} height={1500} />
+                <video
+                  src="/media/case-studies/bec-technical-seminar.mp4"
+                  poster="/media/case-studies/bec-technical-seminar-poster.jpg"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label="BEC Arabia — a DBLSHOT client"
+                />
               </div>
               <div className="bento__tile bento__tile--top">
                 <Image src="/media/case-studies/spritz-avocado.png" alt="Spritz Avocado Cooking Spray — a DBLSHOT client" width={1024} height={1024} />
