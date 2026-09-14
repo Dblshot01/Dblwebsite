@@ -12,6 +12,9 @@ export const metadata = createPageMetadata({
 const spec: CaseStudySpec = {
   slug: "rehana",
   category: "Amazon Ads",
+  bannerImage: "/media/case-studies/rehana-product-lineup.jpg",
+  bannerAlt: "The full Rehana product lineup — rice, oils, flour, sugar, spices, and pantry staples",
+  bannerFit: "contain",
   brand: (
     <>
       Rehana <span className="text-gold">Wins Ramadan</span>

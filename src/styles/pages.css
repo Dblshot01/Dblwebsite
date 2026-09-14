@@ -918,6 +918,15 @@
   height: 100%;
   object-fit: cover;
 }
+/* Uncropped variant — show pre-composed source art at its own aspect ratio,
+   no forced letterbox crop and no bottom-fade darkening over it. */
+.cs-campaign-banner--natural {
+  aspect-ratio: auto;
+  overflow: visible;
+}
+.cs-campaign-banner--natural::after {
+  display: none;
+}
 
 .cs-palette {
   display: grid;
