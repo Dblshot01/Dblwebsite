@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CaseStudyCard } from "@/components/ui/CaseStudyCard";
 import { HomeBlogCard } from "@/components/home/HomeBlogCard";
 import { HomeHero } from "@/components/home/HomeHero";
+import { AutoplayVideo } from "@/components/ui/AutoplayVideo";
 import { CtaMarquee } from "@/components/ui/CtaMarquee";
 import { ServiceIcon } from "@/components/ui/ServiceIcon";
 import { ImpactRoadmap } from "@/components/ui/ImpactRoadmap";
@@ -79,40 +80,25 @@ export function HomePage() {
           <div className="agency-intro__gallery reveal">
             <div className="bento">
               <div className="bento__tile bento__tile--main">
-                <video
+                <AutoplayVideo
                   src="/media/case-studies/bec-technical-seminar.mp4"
                   poster="/media/case-studies/bec-technical-seminar-poster.jpg"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  aria-label="BEC Arabia — a DBLSHOT client"
+                  ariaLabel="BEC Arabia — a DBLSHOT client"
                   style={{ objectFit: "contain" }}
                 />
               </div>
               <div className="bento__tile bento__tile--top">
-                <video
+                <AutoplayVideo
                   src="/media/case-studies/spritz-evolution.mp4"
                   poster="/media/case-studies/spritz-evolution-poster.jpg"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  aria-label="Spritz — a DBLSHOT client"
+                  ariaLabel="Spritz — a DBLSHOT client"
                 />
               </div>
               <div className="bento__tile bento__tile--bottom">
-                <video
+                <AutoplayVideo
                   src="/media/case-studies/isis-water.mp4"
                   poster="/media/case-studies/isis-teas.jpg"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  aria-label="ISIS Organic — a DBLSHOT client"
+                  ariaLabel="ISIS Organic — a DBLSHOT client"
                 />
               </div>
             </div>
