@@ -6,15 +6,12 @@ export const metadata = createPageMetadata({
   description:
     "One month. One chance. How Rehana won Ramadan on Amazon — a full store build and full-funnel ads campaign executed in just 30 days, driving 350% growth on Ramadan SKUs.",
   path: "/case-studies/rehana",
-  image: "/media/case-studies/rehana-golden-rice.jpg",
+  image: "/media/case-studies/rehana-product-lineup.jpg",
 });
 
 const spec: CaseStudySpec = {
   slug: "rehana",
   category: "Amazon Ads",
-  bannerImage: "/media/case-studies/rehana-product-lineup.jpg",
-  bannerAlt: "The full Rehana product lineup — rice, oils, flour, sugar, spices, and pantry staples",
-  bannerFit: "contain",
   brand: (
     <>
       Rehana <span className="text-gold">Wins Ramadan</span>
@@ -27,7 +24,7 @@ const spec: CaseStudySpec = {
     { label: "Market", value: "Egypt" },
     { label: "Scope", value: "Amazon Store Build + Full-Funnel Ads (30 Days)" },
   ],
-  heroImage: "/media/case-studies/rehana-golden-rice.jpg",
+  heroImage: "/media/case-studies/rehana-product-lineup.jpg",
   heroStats: [
     { value: "350%", label: "Growth on Ramadan SKUs" },
     { value: "40%", label: "Total Amazon sales uplift MoM" },

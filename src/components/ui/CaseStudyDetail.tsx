@@ -26,10 +26,6 @@ export type CaseStudySpec = {
    *  specific seasonal creative. */
   bannerImage?: string;
   bannerAlt?: string;
-  /** "contain" shows the banner at its natural aspect ratio with no crop —
-   *  for source art (e.g. a pre-composed lineup shot) that must stay intact.
-   *  Defaults to "cover", which fills the standard letterbox banner shape. */
-  bannerFit?: "cover" | "contain";
   heroImage?: string;
   /** Shown in place of heroImage when set. heroImage doubles as its poster. */
   heroVideo?: string;
@@ -63,31 +59,17 @@ export function CaseStudyDetail({ spec }: { spec: CaseStudySpec }) {
   return (
     <SiteProvider activeNav="services" innerPage>
       {spec.bannerImage ? (
-        spec.bannerFit === "contain" ? (
-          <div className="cs-campaign-banner cs-campaign-banner--natural">
-            <Image
-              src={spec.bannerImage}
-              alt={spec.bannerAlt || ""}
-              width={2948}
-              height={1474}
-              priority
-              sizes="100vw"
-              style={{ width: "100%", height: "auto", display: "block" }}
-            />
-          </div>
-        ) : (
-          <div className="cs-campaign-banner">
-            <Image
-              src={spec.bannerImage}
-              alt={spec.bannerAlt || ""}
-              width={2048}
-              height={1024}
-              priority
-              sizes="100vw"
-              className="cs-campaign-banner__img"
-            />
-          </div>
-        )
+        <div className="cs-campaign-banner">
+          <Image
+            src={spec.bannerImage}
+            alt={spec.bannerAlt || ""}
+            width={2048}
+            height={1024}
+            priority
+            sizes="100vw"
+            className="cs-campaign-banner__img"
+          />
+        </div>
       ) : null}
 
       {/* Hero */}

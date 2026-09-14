@@ -3,18 +3,18 @@ import Link from "next/link";
 import type { CaseStudyCard as CaseStudyCardData } from "@/lib/content/case-studies";
 
 export function CaseStudyCard({ study }: { study: CaseStudyCardData }) {
-  const isLogoImage = study.imageFit === "contain";
+  const isContainImage = study.imageFit === "contain";
   const body = (
     <>
-      <div className={`blog-card__img${isLogoImage ? " blog-card__img--logo" : ""}`}>
+      <div className={`blog-card__img${isContainImage ? " blog-card__img--contain" : ""}`}>
         <Image
           src={study.image}
           alt=""
           width={600}
           height={400}
           style={
-            isLogoImage
-              ? { width: "100%", height: "100%", objectFit: "contain", filter: "none", padding: "2.5rem" }
+            isContainImage
+              ? { width: "100%", height: "100%", objectFit: "contain", filter: "none", padding: "1.25rem" }
               : { width: "100%", height: "100%", objectFit: "cover" }
           }
         />
