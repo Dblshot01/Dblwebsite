@@ -88,6 +88,7 @@ export function HomePage() {
                   playsInline
                   preload="metadata"
                   aria-label="BEC Arabia — a DBLSHOT client"
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <div className="bento__tile bento__tile--top">
