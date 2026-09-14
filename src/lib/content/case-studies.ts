@@ -31,7 +31,7 @@ const CARD_META: Record<string, Pick<CaseStudyCard, "image" | "imageFit" | "metr
     metrics: [{ value: "360°", label: "Campaign scaling" }],
   },
   rehana: {
-    image: "/media/case-studies/rehana-packaging.webp",
+    image: "/media/case-studies/rehana-golden-rice.jpg",
     metrics: [{ value: "350%", label: "Ramadan growth" }],
   },
   ltf: {
