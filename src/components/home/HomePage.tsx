@@ -92,7 +92,16 @@ export function HomePage() {
                 />
               </div>
               <div className="bento__tile bento__tile--top">
-                <Image src="/media/case-studies/spritz-avocado.png" alt="Spritz Avocado Cooking Spray — a DBLSHOT client" width={1024} height={1024} />
+                <video
+                  src="/media/case-studies/spritz-evolution.mp4"
+                  poster="/media/case-studies/spritz-evolution-poster.jpg"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label="Spritz — a DBLSHOT client"
+                />
               </div>
               <div className="bento__tile bento__tile--bottom">
                 <video
