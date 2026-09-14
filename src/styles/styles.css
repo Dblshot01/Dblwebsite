@@ -2319,15 +2319,12 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   filter: sepia(0.12) saturate(0.78) contrast(1.02) brightness(1.04);
   transition: transform 0.8s var(--ease-out-expo), filter 0.35s;
 }
-.blog-card__img--contain {
-  background: #fdfbf3;
-}
-.blog-card__img--contain::after {
-  background:
-    linear-gradient(90deg, var(--gold) 0 24px, transparent 24px calc(100% - 24px), var(--gold) calc(100% - 24px)),
-    linear-gradient(var(--gold) 0 24px, transparent 24px calc(100% - 24px), var(--gold) calc(100% - 24px));
-  background-size: 100% 1px, 1px 100%;
-  background-position: 0 1rem, 1rem 0;
+/* The card's rotated gold "peek" (.blog-card::before) is normally hidden
+   under a full-bleed cover photo. A contain-fit image is smaller than its
+   box, so the peek shows through around it — hide it here so these cards
+   read the same as the regular photo cards. */
+.case-study-card:has(.blog-card__img--contain)::before {
+  display: none;
 }
 .blog-card:hover .blog-card__img img {
   transform: scale(1.07);
