@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { LOGO_URL } from "@/lib/site";
-import { CursorFollower } from "./CursorFollower";
 
 export function SiteChrome() {
   return (
@@ -13,7 +12,6 @@ export function SiteChrome() {
           </div>
         </div>
       </div>
-      <CursorFollower />
       <div className="scroll-progress" aria-hidden="true" />
       <div className="bg-mesh" aria-hidden="true" />
       <div className="bg-orbs" aria-hidden="true">
