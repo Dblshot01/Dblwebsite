@@ -2,6 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    // Assets here get a new filename when their content changes (see git
+    // history — every photo/video swap this project has done renamed the
+    // file rather than overwriting it), so a long TTL is safe: it just
+    // keeps each resized variant cached instead of re-optimizing it on
+    // every expiry, which is what was making images "pop in" late.
+    minimumCacheTTL: 31536000,
     remotePatterns: [
       {
         protocol: "https",
