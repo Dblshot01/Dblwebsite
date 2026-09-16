@@ -21,8 +21,8 @@ export default function CaseStudiesPage() {
     <SiteProvider innerPage>
       <PhotoHero
         id="case-studies-hero"
-        image="/media/case-studies/rehana-table.jpg"
-        objectPosition="50% 35%"
+        image="/media/case-studies/rehana-product-lineup.jpg"
+        objectPosition="50% 50%"
         eyebrow="Our Work"
         title={
           <>
