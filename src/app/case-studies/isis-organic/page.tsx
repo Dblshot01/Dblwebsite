@@ -82,11 +82,11 @@ const spec: CaseStudySpec = {
     },
   ],
   results: [
-    { value: "2,740%", label: "Amazon YoY growth" },
+    { value: "2,740%", label: "Amazon YoY growth", icon: "/media/platforms/amazon.png" },
     { value: "245%", label: "Total e-commerce growth" },
-    { value: "350%", label: "Breadfast" },
-    { value: "140%", label: "Noon" },
-    { value: "477%", label: "GoodsMart" },
+    { value: "350%", label: "Breadfast", icon: "/media/platforms/breadfast.png" },
+    { value: "140%", label: "Noon", icon: "/media/platforms/noon.png" },
+    { value: "477%", label: "GoodsMart", icon: "/media/platforms/goodsmart.png" },
   ],
   related: [
     { label: "Amazon Growth", href: "/services/amazon-growth" },

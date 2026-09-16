@@ -5,7 +5,7 @@ import { PageCTA } from "@/components/ui/PageCTA";
 import { CaseStudyBar, type CaseTabKey } from "@/components/ui/CaseStudyBar";
 import { CASE_STUDY_LOGOS } from "@/lib/content/clients";
 
-export type CSStat = { value: string; label: string };
+export type CSStat = { value: string; label: string; icon?: string };
 export type CSSection = {
   heading: string;
   paragraphs?: string[];
@@ -48,7 +48,12 @@ function StatRow({ stats }: { stats: CSStat[] }) {
       {stats.map((s) => (
         <div className="cs-stat" key={s.label}>
           <strong>{s.value}</strong>
-          <span>{s.label}</span>
+          <span>
+            {s.icon ? (
+              <Image src={s.icon} alt="" width={20} height={20} className="cs-stat__icon" />
+            ) : null}
+            {s.label}
+          </span>
         </div>
       ))}
     </div>
