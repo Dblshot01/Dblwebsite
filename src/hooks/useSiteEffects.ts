@@ -70,30 +70,6 @@ export function useSiteEffects(options?: { home?: boolean }) {
     toggle?.addEventListener("click", onToggle);
     menu?.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
 
-    /* Magnetic buttons */
-    const magneticBtns = document.querySelectorAll<HTMLElement>(".btn--magnetic");
-    const magneticHandlers: { el: HTMLElement; move: (e: MouseEvent) => void; leave: () => void; down: () => void }[] = [];
-    if (!isTouch) {
-      magneticBtns.forEach((btn) => {
-        const move = (e: MouseEvent) => {
-          const rect = btn.getBoundingClientRect();
-          btn.style.transform = `translate(${(e.clientX - rect.left - rect.width / 2) * 0.2}px, ${(e.clientY - rect.top - rect.height / 2) * 0.2}px)`;
-        };
-        const leave = () => {
-          btn.style.transform = "";
-        };
-        // Snap back to the true position on press so mousedown/mouseup land on the
-        // same element — otherwise the displaced button never fires a click.
-        const down = () => {
-          btn.style.transform = "";
-        };
-        btn.addEventListener("mousemove", move);
-        btn.addEventListener("mouseleave", leave);
-        btn.addEventListener("mousedown", down);
-        magneticHandlers.push({ el: btn, move, leave, down });
-      });
-    }
-
     /* Counters */
     const counters = document.querySelectorAll<HTMLElement>("[data-count]");
     const counterObs = new IntersectionObserver(
@@ -256,11 +232,6 @@ export function useSiteEffects(options?: { home?: boolean }) {
       toggle?.removeEventListener("click", onToggle);
       if (wordInterval) clearInterval(wordInterval);
       counterObs.disconnect();
-      magneticHandlers.forEach(({ el, move, leave, down }) => {
-        el.removeEventListener("mousemove", move);
-        el.removeEventListener("mouseleave", leave);
-        el.removeEventListener("mousedown", down);
-      });
       tiltHandlers.forEach(({ card, move, leave }) => {
         card.removeEventListener("mousemove", move);
         card.removeEventListener("mouseleave", leave);

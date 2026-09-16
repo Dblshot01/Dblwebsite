@@ -47,7 +47,7 @@ export function PhotoHero({ image, imageAlt = "", objectPosition, zoom, eyebrow,
             {actions.map((a) => (
               <Link
                 key={a.href}
-                className={`btn btn--${a.variant === "white" ? "white" : "primary"} btn--lg btn--magnetic`}
+                className={`btn btn--${a.variant === "white" ? "white" : "primary"} btn--lg`}
                 href={a.href}
               >
                 {a.label} <span aria-hidden="true">→</span>

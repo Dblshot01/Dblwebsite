@@ -39,7 +39,7 @@ export default async function BlogPostPage({ params }: Props) {
           <aside className="prose-aside reveal">
             <h4>Work with us</h4>
             <p style={{ color: "var(--muted)", fontSize: "0.9rem", marginBottom: "1rem" }}>Ready to scale your brand?</p>
-            <Link className="btn btn--primary btn--magnetic" href="/contact" style={{ width: "100%" }}>
+            <Link className="btn btn--primary" href="/contact" style={{ width: "100%" }}>
               Let&apos;s Talk
             </Link>
           </aside>

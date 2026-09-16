@@ -64,7 +64,7 @@ export function ContactForm() {
         </p>
         <button
           type="button"
-          className="btn btn--ghost btn--magnetic"
+          className="btn btn--ghost"
           onClick={() => setStatus("idle")}
         >
           Send another message
@@ -143,7 +143,7 @@ export function ContactForm() {
         ) : null}
         <button
           type="submit"
-          className="btn btn--primary btn--magnetic"
+          className="btn btn--primary"
           style={{ width: "100%" }}
           disabled={status === "loading"}
         >

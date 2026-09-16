@@ -18,10 +18,10 @@ export default function NotFound() {
             This page doesn&apos;t exist or may have moved. Head back home or get in touch with our team.
           </p>
           <div className="reveal" style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "2rem" }}>
-            <Link className="btn btn--primary btn--magnetic" href="/">
+            <Link className="btn btn--primary" href="/">
               Back to Home
             </Link>
-            <Link className="btn btn--ghost btn--magnetic" href="/contact">
+            <Link className="btn btn--ghost" href="/contact">
               Let&apos;s Talk
             </Link>
           </div>

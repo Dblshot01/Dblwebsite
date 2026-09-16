@@ -237,7 +237,7 @@ export default function AmazonGrowthPage() {
                   <span>To #1 sales channel</span>
                 </div>
               </div>
-              <Link className="btn btn--primary btn--magnetic" href="/case-studies/isis-organic">
+              <Link className="btn btn--primary" href="/case-studies/isis-organic">
                 View Results →
               </Link>
             </div>

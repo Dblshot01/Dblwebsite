@@ -297,7 +297,7 @@ export default function StrategyPage() {
             <h2 style={{ fontSize: "clamp(2rem,6vw,3.5rem)", fontWeight: 800, margin: 0, color: "var(--navy-950)" }}>
               Boost Your Performance
             </h2>
-            <Link className="btn btn--dark btn--magnetic" href="/contact" style={{ fontSize: "1.1rem" }}>
+            <Link className="btn btn--dark" href="/contact" style={{ fontSize: "1.1rem" }}>
               Start Now!
             </Link>
           </div>

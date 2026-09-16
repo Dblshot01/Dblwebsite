@@ -30,10 +30,7 @@ export function PageCTA({
               {buttonLabel}
             </a>
           ) : (
-            <Link
-              className={buttonMuted ? btnClass : `${btnClass} btn--magnetic`}
-              href={buttonHref}
-            >
+            <Link className={btnClass} href={buttonHref}>
               {buttonLabel}
             </Link>
           )}

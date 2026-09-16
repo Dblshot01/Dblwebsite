@@ -29,7 +29,7 @@ export function PageHero({ label, title, subtitle, logo, logoAlt, ctaLabel, ctaH
         </h1>
         {subtitle ? <p className="page-hero__sub reveal">{subtitle}</p> : null}
         {ctaLabel && ctaHref ? (
-          <Link className="btn btn--primary btn--magnetic page-hero__cta reveal" href={ctaHref}>
+          <Link className="btn btn--primary page-hero__cta reveal" href={ctaHref}>
             {ctaLabel}
           </Link>
         ) : null}

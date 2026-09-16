@@ -236,7 +236,7 @@ export function HomePage() {
               <span className="cta-word">kick off.</span>
               <span className="cta-word">boost.</span>
             </div>
-            <Link className="btn btn--dark btn--magnetic" href="/contact" style={{ fontSize: "1.1rem" }}>
+            <Link className="btn btn--dark" href="/contact" style={{ fontSize: "1.1rem" }}>
               Let&apos;s Talk <span aria-hidden="true">→</span>
             </Link>
           </div>

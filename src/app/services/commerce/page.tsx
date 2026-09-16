@@ -215,7 +215,7 @@ export default function CommercePage() {
                   <span>Total e-commerce growth</span>
                 </div>
               </div>
-              <Link className="btn btn--primary btn--magnetic" href="/case-studies/isis-organic">
+              <Link className="btn btn--primary" href="/case-studies/isis-organic">
                 View Results →
               </Link>
             </div>

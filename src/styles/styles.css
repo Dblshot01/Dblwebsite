@@ -341,8 +341,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   border-color: var(--gold);
   background: var(--glass);
 }
-.btn--magnetic { position: relative; }
-
 @media (max-width: 899px) {
   .hidden-mobile { display: none !important; }
 }

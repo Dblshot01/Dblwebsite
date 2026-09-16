@@ -47,7 +47,7 @@ export default async function CaseStudyPage({ params }: Props) {
             <p style={{ color: "var(--muted)", fontSize: "0.9rem", marginBottom: "1rem" }}>
               Ready to scale your brand?
             </p>
-            <Link className="btn btn--primary btn--magnetic" href="/contact" style={{ width: "100%" }}>
+            <Link className="btn btn--primary" href="/contact" style={{ width: "100%" }}>
               Let&apos;s Talk
             </Link>
           </aside>

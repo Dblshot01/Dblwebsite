@@ -35,7 +35,7 @@ export default function AboutPage() {
                 {ABOUT_COPY.paragraphs.map((p) => (
                   <p key={p.slice(0, 40)} className="reveal">{p}</p>
                 ))}
-                <Link className="btn btn--primary btn--magnetic reveal" href="/contact">
+                <Link className="btn btn--primary reveal" href="/contact">
                   Let&apos;s Talk
                 </Link>
               </div>

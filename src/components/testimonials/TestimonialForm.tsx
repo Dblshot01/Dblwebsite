@@ -65,7 +65,7 @@ export function TestimonialForm() {
           Your testimonial is with our team. Once we&apos;ve reviewed it, it may appear on this page
           and across the site.
         </p>
-        <button type="button" className="btn btn--ghost btn--magnetic" onClick={() => setStatus("idle")}>
+        <button type="button" className="btn btn--ghost" onClick={() => setStatus("idle")}>
           Write another
         </button>
       </div>
@@ -147,7 +147,7 @@ export function TestimonialForm() {
 
         <button
           type="submit"
-          className="btn btn--primary btn--magnetic"
+          className="btn btn--primary"
           style={{ width: "100%" }}
           disabled={disabled}
         >
