@@ -57,7 +57,7 @@ export default function PerformancePage() {
         label="Performance"
         title={
           <>
-            Performance Marketing <span className="text-gold">That Pays for Itself</span>
+            Growth <span className="text-gold">That Covers Its Own Costs</span>
           </>
         }
         subtitle="Paid media across Meta, Google, TikTok, and Snapchat — structured, tested, and optimized daily around one goal: measurable growth."
