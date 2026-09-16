@@ -45,7 +45,7 @@ export const CASE_STUDY_LOGOS: Record<string, string> = {
   "isis-organic": "/media/case-studies/logos/isis-organic.png",
   rehana: "/media/case-studies/logos/rehana.jpg",
   spritz: "/media/clients/ibhVBT9CyJYkeU3S1xgOmYojaw.png",
-  raw: "/media/clients/oh76Ahmwjefn0XKpodDl2yAn44E.png",
+  raw: "/media/case-studies/logos/raw.png",
   wingo: "/media/case-studies/logos/wingo.png",
   zeina: "/media/case-studies/logos/zeina.png",
 };
