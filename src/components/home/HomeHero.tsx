@@ -63,13 +63,13 @@ export function HomeHero() {
           </h1>
 
           <div className="hero2__actions reveal">
-            <Link className="btn btn--primary btn--lg btn--magnetic" href="#service">
+            <Link className="btn btn--primary btn--lg" href="#service">
               Explore Services <span aria-hidden="true">→</span>
             </Link>
-            <Link className="btn btn--white btn--lg btn--magnetic" href="/case-studies">
+            <Link className="btn btn--white btn--lg" href="/case-studies">
               View Case Studies <span aria-hidden="true">→</span>
             </Link>
-            <Link className="btn btn--primary btn--lg btn--magnetic" href="/contact">
+            <Link className="btn btn--primary btn--lg" href="/contact">
               Let&apos;s Talk <span aria-hidden="true">→</span>
             </Link>
           </div>
