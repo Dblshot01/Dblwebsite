@@ -28,10 +28,10 @@ const spec: CaseStudySpec = {
   heroVideo: "/media/case-studies/isis-water.mp4",
   heroVideoPoster: "/media/case-studies/isis-organic-video-poster.png",
   heroStats: [
-    { value: "2,740%", label: "Amazon YoY growth" },
+    { value: "2,740%", label: "Amazon YoY growth", icon: "/media/platforms/amazon.png" },
     { value: "245%", label: "Total e-commerce growth" },
-    { value: "350%", label: "Breadfast growth" },
-    { value: "477%", label: "GoodsMart growth" },
+    { value: "350%", label: "Breadfast growth", icon: "/media/platforms/breadfast.png" },
+    { value: "477%", label: "GoodsMart growth", icon: "/media/platforms/goodsmart.png" },
   ],
   sections: [
     {
