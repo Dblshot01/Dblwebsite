@@ -1,8 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import { SiteProvider } from "@/components/layout/SiteProvider";
 import { PageCTA } from "@/components/ui/PageCTA";
+import { CaseStudyCard } from "@/components/ui/CaseStudyCard";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { getAllCaseStudies } from "@/lib/content/case-studies";
 import { createPageMetadata } from "@/lib/seo";
+
+const FEATURED_CASE_STUDY_SLUGS = new Set(["isis-organic", "spritz", "rehana"]);
 
 export const metadata = createPageMetadata({
   title: "E-Commerce Agency in Egypt | Amazon, Noon & Marketplace Growth",
@@ -163,44 +167,18 @@ export default function CommercePage() {
         </div>
       </section>
 
-      {/* Results — ISIS */}
+      {/* Case Studies */}
       <section className="section">
         <div className="container">
-          <div className="spotlight reveal-stagger">
-            <div className="spotlight__visual">
-              <Image
-                src="/media/case-studies/ecommerce/p05.jpg"
-                alt="ISIS Organic e-commerce growth"
-                width={800}
-                height={600}
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-              <span className="spotlight__badge">Case Study</span>
-            </div>
-            <div className="spotlight__content">
-              <h3 style={{ fontSize: "1.75rem", textTransform: "uppercase", marginBottom: "1rem" }}>
-                iSiS Organic — 2,740% Amazon. 245% Total E-Commerce.
-              </h3>
-              <p style={{ color: "var(--muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-                We expanded ISIS Organic&apos;s full digital commerce operation across Amazon Egypt,
-                Noon, Breadfast, GoodsMart, Botit, Rabbit, and Talabat — rebuilding the catalogue,
-                restructuring advertising, and activating each platform with a phased, data-driven
-                approach.
-              </p>
-              <div className="spotlight__metrics">
-                <div className="spotlight__metric">
-                  <strong>2740%</strong>
-                  <span>YOY Amazon growth</span>
-                </div>
-                <div className="spotlight__metric">
-                  <strong>245%</strong>
-                  <span>Total e-commerce growth</span>
-                </div>
-              </div>
-              <Link className="btn btn--primary" href="/case-studies/isis-organic">
-                View Results →
-              </Link>
-            </div>
+          <SectionHeading center>
+            Case <span className="text-gold">Studies</span>
+          </SectionHeading>
+          <div className="blogs-grid reveal-stagger">
+            {getAllCaseStudies()
+              .filter((study) => FEATURED_CASE_STUDY_SLUGS.has(study.slug))
+              .map((study) => (
+                <CaseStudyCard key={study.slug} study={study} />
+              ))}
           </div>
         </div>
       </section>
