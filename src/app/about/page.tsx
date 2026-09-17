@@ -68,13 +68,21 @@ export default function AboutPage() {
             <SectionHeading>
               Mission &amp; <span className="text-gold">Vision</span>
             </SectionHeading>
-            <div className="pillars reveal-stagger">
-              {MISSION_VISION.map((m) => (
-                <article className="pillar" key={m.kicker}>
-                  <span className="pillar__kicker">{m.kicker}</span>
-                  <h3 className="pillar__title">{m.title}</h3>
-                  <p className="pillar__body">{m.body}</p>
-                </article>
+            <div className="values-accordion reveal-stagger">
+              {MISSION_VISION.map((m, i) => (
+                <details className="values-accordion__item" key={m.kicker} open={i === 0}>
+                  <summary className="values-accordion__summary">
+                    <span className="values-accordion__num">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="values-accordion__title">{m.kicker}</span>
+                    <span className="values-accordion__icon" aria-hidden="true">
+                      +
+                    </span>
+                  </summary>
+                  <div className="values-accordion__body">
+                    <h3 className="pillar__title">{m.title}</h3>
+                    <p>{m.body}</p>
+                  </div>
+                </details>
               ))}
             </div>
           </div>
