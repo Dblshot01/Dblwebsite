@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { SiteProvider } from "@/components/layout/SiteProvider";
 import { ServiceIcon } from "@/components/ui/ServiceIcon";
+import { PageCTA } from "@/components/ui/PageCTA";
 import { createPageMetadata } from "@/lib/seo";
 
 type ServiceIconName = "amazon" | "cart" | "chart" | "web" | "research";
@@ -282,19 +282,10 @@ export default function StrategyPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section cta-section">
-        <div className="container">
-          <div className="cta-box reveal">
-            <h2 style={{ fontSize: "clamp(2rem,6vw,3.5rem)", fontWeight: 800, margin: 0, color: "var(--navy-950)" }}>
-              Boost Your Performance
-            </h2>
-            <Link className="btn btn--dark" href="/contact" style={{ fontSize: "1.1rem" }}>
-              Start Now!
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Let's Talk"
+        description="Great brands aren't born — they're built, one bold move at a time. Let's build yours."
+      />
     </SiteProvider>
   );
 }
