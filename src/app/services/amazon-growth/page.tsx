@@ -157,11 +157,6 @@ export default function AmazonGrowthPage() {
         </div>
       </section>
 
-      <PageCTA
-        title="Let's Own Your Shelf"
-        description="Unlock your brand's full marketplace potential across Amazon Egypt, KSA & UAE with Dblshot."
-      />
-
       {/* Why us */}
       <section className="section">
         <div className="container content-shell content-prose">
@@ -192,6 +187,11 @@ export default function AmazonGrowthPage() {
           </div>
         </div>
       </section>
+
+      <PageCTA
+        title="Let's Own Your Shelf"
+        description="Unlock your brand's full marketplace potential across Amazon Egypt, KSA & UAE with Dblshot."
+      />
     </SiteProvider>
   );
 }
