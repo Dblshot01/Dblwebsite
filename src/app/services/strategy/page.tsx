@@ -153,7 +153,7 @@ export default function StrategyPage() {
           <Image
             className="ads-banner__img"
             src="/media/services/strategy-hero-banner.png"
-            alt="Great brands aren't born. They're built, one bold move at a time — this is where yours begins."
+            alt="Strategy & Consultancy"
             width={2780}
             height={878}
             priority
@@ -171,7 +171,6 @@ export default function StrategyPage() {
             </>
           }
           hideTitle
-          subtitle="Great brands aren't born. They're built. One bold move at a time. This is where yours begins."
         />
       </div>
 
