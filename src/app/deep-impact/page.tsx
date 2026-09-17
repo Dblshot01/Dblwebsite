@@ -53,6 +53,7 @@ export default function DeepImpactPage() {
               Deep <span className="text-gold">Impact</span>
             </>
           }
+          hideTitle
           subtitle="Results aren't claimed. They're proven, campaign by campaign. This is deep impact."
         />
       </div>
@@ -60,6 +61,9 @@ export default function DeepImpactPage() {
       {/* Headline numbers */}
       <section className="section section--glow">
         <div className="container">
+          <SectionHeading>
+            Deep <span className="text-gold">Impact</span>
+          </SectionHeading>
           <div className="impact-stats">
             {DEEP_IMPACT_STATS.map((stat) => (
               <article key={stat.label} className="impact-stat">
