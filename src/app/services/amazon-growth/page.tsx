@@ -96,7 +96,7 @@ export default function AmazonGrowthPage() {
           <Image
             className="ads-banner__img"
             src="/media/services/amazon-growth-hero-banner.png"
-            alt="Rankings aren't luck. They're earned, listing by listing — this is Amazon growth built to dominate."
+            alt="Amazon Growth"
             width={2780}
             height={878}
             priority
@@ -114,7 +114,6 @@ export default function AmazonGrowthPage() {
             </>
           }
           hideTitle
-          subtitle="Rankings aren't luck. They're earned, listing by listing. This is Amazon growth built to dominate."
           ctaLabel="Start a Strategy Call"
           ctaHref="/contact"
         />

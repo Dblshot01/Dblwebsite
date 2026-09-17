@@ -44,7 +44,7 @@ export default function PerformancePage() {
           <Image
             className="ads-banner__img"
             src="/media/services/performance-hero-banner.png"
-            alt="Growth isn't guessed. It's engineered, tested, and proven daily — this is performance built to convert."
+            alt="Performance"
             width={2780}
             height={878}
             priority
@@ -58,7 +58,6 @@ export default function PerformancePage() {
           label="Services"
           title={<span className="text-gold">Performance</span>}
           hideTitle
-          subtitle="Growth isn't guessed. It's engineered, tested, and proven daily. This is performance built to convert."
         />
       </div>
 

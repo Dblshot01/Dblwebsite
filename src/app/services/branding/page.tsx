@@ -41,7 +41,7 @@ export default function BrandingPage() {
           <Image
             className="ads-banner__img"
             src="/media/services/creative-hero-banner.png"
-            alt="Creative isn't decoration. It's the reason people stop scrolling — this is where attention turns into growth."
+            alt="Creative"
             width={2780}
             height={878}
             priority
@@ -55,7 +55,6 @@ export default function BrandingPage() {
           label="Services"
           title={<span className="text-gold">Creative</span>}
           hideTitle
-          subtitle="Creative isn't decoration. It's the reason people stop scrolling. This is where attention turns into growth."
         />
       </div>
       <section className="section">

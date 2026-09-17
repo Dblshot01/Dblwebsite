@@ -75,7 +75,7 @@ export default function CommercePage() {
           <Image
             className="ads-banner__img"
             src="/media/services/ecommerce-hero-banner.png"
-            alt="Your store isn't a website. It's your best salesperson, open 24/7 — this is e-commerce built to sell."
+            alt="E-Commerce"
             width={2780}
             height={878}
             priority
@@ -93,7 +93,6 @@ export default function CommercePage() {
             </>
           }
           hideTitle
-          subtitle="Your store isn't a website. It's your best salesperson, open 24/7. This is e-commerce built to sell."
         />
       </div>
 
