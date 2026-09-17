@@ -22,11 +22,12 @@ const CASE_TABS: CaseTab[] = [
 /** Keys that have a real page — used by pages to decide whether to render the bar. */
 export const CASE_BAR_KEYS: CaseTabKey[] = ["isis-organic", "spritz", "rehana"];
 
-export function CaseStudyBar({ active }: { active: CaseTabKey }) {
+export function CaseStudyBar({ active, hide }: { active: CaseTabKey; hide?: CaseTabKey[] }) {
+  const tabs = hide?.length ? CASE_TABS.filter((tab) => !hide.includes(tab.key)) : CASE_TABS;
   return (
     <nav className="case-bar" aria-label="Amazon Ads case studies">
       <div className="container case-bar__track">
-        {CASE_TABS.map((tab, i) => {
+        {tabs.map((tab, i) => {
           const isActive = tab.key === active;
           const inner = (
             <>

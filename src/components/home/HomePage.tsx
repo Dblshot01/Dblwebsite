@@ -18,6 +18,10 @@ import { getAllCaseStudies } from "@/lib/content/case-studies";
 /** Same shortlist as the Deep Impact page's "The Work" section. */
 const HOME_WORK_HIDDEN_SLUGS = new Set(["ltf", "zeina", "raw", "cimento-forca", "wingo"]);
 
+/** iSiS-Organic is already featured as a proper case study in the Case Studies
+ *  grid above — this blog-post duplicate of it is redundant here. */
+const HOME_BLOG_HIDDEN_SLUGS = new Set(["isis-organic"]);
+
 /**
  * Most client logos are plain white cutouts that need to be forced to a dark
  * silhouette (via CSS `brightness(0)`) to read on the cream page background.
@@ -48,6 +52,7 @@ const LOGO_MARQUEE_ITEMS = [...CLIENT_LOGOS, ...CLIENT_LOGOS];
 
 export function HomePage() {
   const workStudies = getAllCaseStudies().filter((s) => !HOME_WORK_HIDDEN_SLUGS.has(s.slug));
+  const blogPosts = HOME_BLOG_POSTS.filter((post) => !HOME_BLOG_HIDDEN_SLUGS.has(post.slug));
 
   return (
     <>
@@ -260,20 +265,6 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Knowledge Drop */}
-      <section className="section section--glow" id="blogs">
-        <div className="container">
-          <SectionHeading center>
-            Knowledge <span className="text-gold">Drop</span>
-          </SectionHeading>
-          <div className="blogs-grid reveal-stagger">
-            {HOME_BLOG_POSTS.map((post, index) => (
-              <HomeBlogCard key={post.slug + post.tag} post={post} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* The Work */}
       <section className="section" id="work">
         <div className="container">
@@ -283,6 +274,20 @@ export function HomePage() {
           <div className="blogs-grid reveal-stagger">
             {workStudies.map((study) => (
               <CaseStudyCard key={study.slug} study={study} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Knowledge Drop */}
+      <section className="section section--glow" id="blogs">
+        <div className="container">
+          <SectionHeading center>
+            Knowledge <span className="text-gold">Drop</span>
+          </SectionHeading>
+          <div className="blogs-grid reveal-stagger">
+            {blogPosts.map((post, index) => (
+              <HomeBlogCard key={post.slug + post.tag} post={post} index={index} />
             ))}
           </div>
         </div>

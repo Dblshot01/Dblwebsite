@@ -1,9 +1,13 @@
 import Image from "next/image";
-import Link from "next/link";
 import { SiteProvider } from "@/components/layout/SiteProvider";
 import { PageCTA } from "@/components/ui/PageCTA";
 import { CaseStudyBar } from "@/components/ui/CaseStudyBar";
+import { CaseStudyCard } from "@/components/ui/CaseStudyCard";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { getAllCaseStudies } from "@/lib/content/case-studies";
 import { createPageMetadata } from "@/lib/seo";
+
+const FEATURED_CASE_STUDY_SLUGS = new Set(["isis-organic", "spritz", "rehana"]);
 
 export const metadata = createPageMetadata({
   title: "Amazon Growth Agency — Egypt, KSA & UAE",
@@ -95,7 +99,7 @@ export default function AmazonGrowthPage() {
         </div>
       </section>
 
-      <CaseStudyBar active="about" />
+      <CaseStudyBar active="about" hide={["isis-organic"]} />
 
       {/* Three Pillars */}
       <section className="section">
@@ -173,44 +177,18 @@ export default function AmazonGrowthPage() {
         </div>
       </section>
 
-      {/* Results — ISIS */}
+      {/* Case Studies */}
       <section className="section">
         <div className="container">
-          <div className="spotlight reveal-stagger">
-            <div className="spotlight__visual">
-              <Image
-                src="/media/case-studies/ecommerce/p05.jpg"
-                alt="Amazon growth"
-                width={800}
-                height={600}
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-              <span className="spotlight__badge">Case Study</span>
-            </div>
-            <div className="spotlight__content">
-              <h3 style={{ fontSize: "1.75rem", textTransform: "uppercase", marginBottom: "1rem" }}>
-                iSiS Organic — 2,740% Amazon Growth Year-on-Year
-              </h3>
-              <p style={{ color: "var(--muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-                When Dblshot took over full Amazon management for ISIS Organic, we rebuilt their
-                catalogue, enrolled the brand in Brand Registry, created A+ content across all SKUs,
-                and launched a structured Sponsored Products and Sponsored Brands strategy — making
-                Amazon their highest-performing sales channel within 12 months.
-              </p>
-              <div className="spotlight__metrics">
-                <div className="spotlight__metric">
-                  <strong>2740%</strong>
-                  <span>YOY Amazon growth</span>
-                </div>
-                <div className="spotlight__metric">
-                  <strong>12mo</strong>
-                  <span>To #1 sales channel</span>
-                </div>
-              </div>
-              <Link className="btn btn--primary" href="/case-studies/isis-organic">
-                View Results →
-              </Link>
-            </div>
+          <SectionHeading center>
+            Case <span className="text-gold">Studies</span>
+          </SectionHeading>
+          <div className="blogs-grid reveal-stagger">
+            {getAllCaseStudies()
+              .filter((study) => FEATURED_CASE_STUDY_SLUGS.has(study.slug))
+              .map((study) => (
+                <CaseStudyCard key={study.slug} study={study} />
+              ))}
           </div>
         </div>
       </section>
