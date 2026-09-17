@@ -154,13 +154,15 @@ export function HomePage() {
       <section className="section" id="service">
         <div className="container offer-split">
           <div className="offer-panel reveal">
-            {/* Placeholder lifestyle photo — swap for real DBLSHOT/team photography when available. */}
-            <Image
-              src="/media/stock/offer-lifestyle-placeholder.jpg"
-              alt=""
+            <video
+              className="offer-panel__img offer-panel__video"
+              src="/media/home/offer-panel.mp4"
+              poster="/media/home/offer-panel-poster.jpg"
               aria-hidden="true"
-              fill
-              className="offer-panel__img"
+              autoPlay
+              muted
+              loop
+              playsInline
             />
             <div className="offer-panel__scrim" aria-hidden="true" />
             <h2 className="offer-panel__heading">
