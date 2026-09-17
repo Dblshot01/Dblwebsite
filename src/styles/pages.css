@@ -1010,7 +1010,7 @@
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 0.6rem;
-  object-fit: cover;
+  object-fit: contain;
   flex-shrink: 0;
 }
 .platform strong { color: var(--text-strong); font-size: 1rem; }
