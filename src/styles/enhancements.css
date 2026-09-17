@@ -1346,6 +1346,13 @@ body {
     radial-gradient(circle at 78% 24%, rgb(236 224 126 / 0.44), transparent 24rem),
     linear-gradient(180deg, rgb(var(--navy-900-rgb) / 0.72), rgb(var(--navy-950-rgb) / 0.38));
 }
+/* Sits directly under a full-bleed banner that already anchors the page
+   visually — the standard full-viewport min-height/padding above would
+   just be dead space here, not a hero of its own. */
+.tech-hero-compact .page-hero {
+  min-height: auto;
+  padding: 2rem 0 1.5rem;
+}
 .page-hero::before {
   top: auto;
   right: clamp(1rem, 8vw, 9rem);
