@@ -170,6 +170,7 @@ export default function StrategyPage() {
               Strategy <span className="text-gold">& Consultancy</span>
             </>
           }
+          hideTitle
           subtitle="Great brands aren't born. They're built. One bold move at a time. This is where yours begins."
         />
       </div>
@@ -178,6 +179,9 @@ export default function StrategyPage() {
       <section className="section">
         <div className="container content-shell content-prose">
           <span className="section-label reveal">Who We Are</span>
+          <h2 className="reveal" style={{ fontSize: "1.35rem", textTransform: "uppercase", margin: "0.5rem 0 1rem", color: "var(--text-strong)" }}>
+            Strategy &amp; Consultancy
+          </h2>
           <p className="reveal" style={{ fontSize: "1.15rem" }}>
             At Dblshot, we believe that exceptional marketing requires commitment, innovation,
             and a heavy dose of creativity. We are a Performance Marketing and Consulting Agency

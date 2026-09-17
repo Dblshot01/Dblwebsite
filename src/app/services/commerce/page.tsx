@@ -92,6 +92,7 @@ export default function CommercePage() {
               E-<span className="text-gold">Commerce</span>
             </>
           }
+          hideTitle
           subtitle="Your store isn't a website. It's your best salesperson, open 24/7. This is e-commerce built to sell."
         />
       </div>

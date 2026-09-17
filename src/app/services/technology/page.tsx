@@ -54,12 +54,16 @@ export default function TechnologyPage() {
               Website <span className="text-gold">Development</span>
             </>
           }
+          hideTitle
           subtitle="Digital experiences that support growth, strengthen brand presence, and guide users toward action."
         />
       </div>
 
       <section className="section" style={{ paddingTop: "2.5rem" }}>
         <div className="container content-shell content-prose">
+          <h2 className="reveal" style={{ fontSize: "1.35rem", textTransform: "uppercase", margin: "0 0 1rem", color: "var(--text-strong)" }}>
+            Website Development
+          </h2>
           <p className="reveal">
             At Dblshot, we build websites designed to do more than exist online. We create digital
             experiences that support business growth, strengthen brand presence, and guide users

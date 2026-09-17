@@ -54,11 +54,15 @@ export default function BrandingPage() {
         <PageHero
           label="Services"
           title={<span className="text-gold">Creative</span>}
+          hideTitle
           subtitle="Creative isn't decoration. It's the reason people stop scrolling. This is where attention turns into growth."
         />
       </div>
       <section className="section">
         <div className="container content-shell content-prose">
+          <h2 className="reveal" style={{ fontSize: "1.35rem", textTransform: "uppercase", margin: "0 0 1rem", color: "var(--text-strong)" }}>
+            Creative
+          </h2>
           <p className="reveal">
             At Dblshot, we believe a brand is more than a logo. It is the first impression a business
             makes, the language it speaks, and the feeling it leaves behind. Our full branding

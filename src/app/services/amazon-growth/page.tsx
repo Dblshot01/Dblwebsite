@@ -113,6 +113,7 @@ export default function AmazonGrowthPage() {
               Amazon <span className="text-gold">Growth</span>
             </>
           }
+          hideTitle
           subtitle="Rankings aren't luck. They're earned, listing by listing. This is Amazon growth built to dominate."
           ctaLabel="Start a Strategy Call"
           ctaHref="/contact"

@@ -57,6 +57,7 @@ export default function PerformancePage() {
         <PageHero
           label="Services"
           title={<span className="text-gold">Performance</span>}
+          hideTitle
           subtitle="Growth isn't guessed. It's engineered, tested, and proven daily. This is performance built to convert."
         />
       </div>
@@ -64,6 +65,9 @@ export default function PerformancePage() {
       <section className="section">
         <div className="container content-shell content-prose">
           <span className="section-label reveal">Who We Are</span>
+          <h2 className="reveal" style={{ fontSize: "1.35rem", textTransform: "uppercase", margin: "0.5rem 0 1rem", color: "var(--text-strong)" }}>
+            Performance
+          </h2>
           <p className="reveal" style={{ fontSize: "1.15rem" }}>
             Performance marketing is where strategy meets spend. Our team runs paid media as a
             connected growth engine — not a set of disconnected campaigns — pairing media buying
