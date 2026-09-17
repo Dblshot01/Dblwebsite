@@ -27,14 +27,6 @@ const WHAT_WE_DO = [
   "Tight coordination with creative and e-commerce teams so every click lands on a page built to convert",
 ];
 
-const WHY_PARTNER = [
-  "A dedicated performance team — not a single generalist juggling every platform",
-  "FMCG-native media buying, built around real category economics and margin",
-  "Testing-first approach that protects budget while scaling what proves out",
-  "Transparent, weekly reporting with no black-box metrics",
-  "Media strategy connected to e-commerce and Amazon, not run in isolation",
-];
-
 export default function PerformancePage() {
   return (
     <SiteProvider activeNav="services" innerPage>
@@ -105,17 +97,15 @@ export default function PerformancePage() {
             ))}
           </ul>
 
-          <h2
+          <Image
             className="reveal"
-            style={{ fontSize: "1.35rem", textTransform: "uppercase", margin: "2.5rem 0 1rem", color: "var(--text-strong)" }}
-          >
-            Why Partner with Us?
-          </h2>
-          <ul className="checklist reveal">
-            {WHY_PARTNER.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+            src="/media/why-us/why-us-yellow.png"
+            alt="Why choose Dblshot"
+            width={1256}
+            height={888}
+            style={{ width: "100%", height: "auto", borderRadius: "1.25rem", margin: "2.5rem 0" }}
+            sizes="(max-width: 800px) 100vw, 800px"
+          />
 
           <p className="reveal" style={{ color: "var(--ice)", marginTop: "2rem" }}>
             Deep Impact starts with media that&apos;s built to perform. Let&apos;s put your budget

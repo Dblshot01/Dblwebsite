@@ -71,15 +71,6 @@ const INCLUDES = [
   "Weekly live performance dashboards and monthly reporting",
 ];
 
-const WHY = [
-  "Amazon-specialist team with active management across Egypt, KSA, and UAE markets",
-  "FMCG-native expertise across haircare, personal care, food, and household categories",
-  "Full-funnel Amazon advertising — from awareness to conversion",
-  "Listings, A+ content, and brand stores built to international quality standards",
-  "Data-driven ad management with weekly optimization and transparent reporting",
-  "Strategies that protect margin while scaling top-line revenue",
-];
-
 const headingStyle = {
   fontSize: "1.5rem",
   textTransform: "uppercase" as const,
@@ -185,22 +176,15 @@ export default function AmazonGrowthPage() {
       {/* Why us */}
       <section className="section">
         <div className="container content-shell content-prose">
-          <h2 className="reveal" style={headingStyle}>
-            Why FMCG Brands Trust Dblshot for Amazon Management in Egypt, KSA &amp; UAE
-          </h2>
-          <p className="reveal">
-            Amazon in Egypt, Saudi Arabia, and the UAE operates differently from global markets —
-            consumer behavior, category dynamics, platform mechanics, and seasonal peaks all
-            require local expertise. Dblshot is built entirely around this reality. Our team
-            manages FMCG brands daily across all three Amazon markets, bringing category
-            intelligence, platform knowledge, and optimization experience a generalist agency
-            simply cannot match.
-          </p>
-          <ul className="checklist reveal">
-            {WHY.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          <Image
+            className="reveal"
+            src="/media/why-us/why-us-blue.png"
+            alt="Why choose Dblshot"
+            width={1256}
+            height={888}
+            style={{ width: "100%", height: "auto", borderRadius: "1.25rem" }}
+            sizes="(max-width: 800px) 100vw, 800px"
+          />
         </div>
       </section>
 

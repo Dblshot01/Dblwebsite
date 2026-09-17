@@ -23,15 +23,6 @@ const WHATS_INCLUDED = [
   "Full brand guidelines document — a single source of truth for your brand",
 ];
 
-const WHY_PARTNER = [
-  "End-to-end branding from strategy to final asset delivery",
-  "Deep understanding of FMCG, retail, and service brand environments",
-  "Design rooted in market research, not aesthetic preference",
-  "Bilingual capability — Arabic and English brand systems",
-  "Consistent brand identity across digital, print, and physical touchpoints",
-  "Delivered with full brand guidelines so your team can execute with confidence",
-];
-
 export default function BrandingPage() {
   return (
     <SiteProvider activeNav="services" innerPage>
@@ -89,14 +80,15 @@ export default function BrandingPage() {
             ))}
           </ul>
 
-          <h2 className="reveal" style={{ fontSize: "1.35rem", textTransform: "uppercase", margin: "2.5rem 0 1rem" }}>
-            <span className="text-blue">Why</span> <span className="text-gold">Partner with Us?</span>
-          </h2>
-          <ul className="checklist reveal">
-            {WHY_PARTNER.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          <Image
+            className="reveal"
+            src="/media/why-us/why-us-blue.png"
+            alt="Why choose Dblshot"
+            width={1256}
+            height={888}
+            style={{ width: "100%", height: "auto", borderRadius: "1.25rem", margin: "2.5rem 0" }}
+            sizes="(max-width: 800px) 100vw, 800px"
+          />
 
           <p className="reveal" style={{ color: "var(--ice)", marginTop: "2rem" }}>
             Your brand is how the world sees you before you say a word. Let us make sure it says the

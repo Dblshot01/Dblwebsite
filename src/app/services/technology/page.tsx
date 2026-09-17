@@ -19,15 +19,6 @@ const WHAT_WE_BUILD = [
   "Development across WordPress, Framer, and native platforms",
 ];
 
-const WHY_PARTNER = [
-  "E-commerce websites built to support sales and scale",
-  "Service-based websites designed for lead generation",
-  "Expertise across WordPress, Framer, and native development",
-  "CRO-driven tactics across both business models",
-  "UI and UX design built around the full buyer journey",
-  "Websites that balance brand experience with commercial performance",
-];
-
 export default function TechnologyPage() {
   return (
     <SiteProvider activeNav="services" innerPage>
@@ -90,14 +81,15 @@ export default function TechnologyPage() {
             ))}
           </ul>
 
-          <h2 className="reveal" style={{ fontSize: "1.35rem", textTransform: "uppercase", margin: "2.5rem 0 1rem", color: "var(--text-strong)" }}>
-            Why Partner with Us?
-          </h2>
-          <ul className="checklist reveal">
-            {WHY_PARTNER.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          <Image
+            className="reveal"
+            src="/media/why-us/why-us-yellow.png"
+            alt="Why choose Dblshot"
+            width={1256}
+            height={888}
+            style={{ width: "100%", height: "auto", borderRadius: "1.25rem", margin: "2.5rem 0" }}
+            sizes="(max-width: 800px) 100vw, 800px"
+          />
 
           <p className="reveal" style={{ color: "var(--ice)", marginTop: "2rem" }}>
             Deep Impact starts with the right digital presence. Let us help you build a website that

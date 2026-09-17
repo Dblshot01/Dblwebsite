@@ -50,15 +50,6 @@ const COVERS = [
   "Live performance dashboards and quarterly forecasting so your team has full commercial visibility at all times",
 ];
 
-const WHY = [
-  "Full-service e-commerce management across all major Egypt and KSA marketplaces",
-  "FMCG-native expertise with proven category results",
-  "Catalogue and content optimization built to win search visibility and improve conversion",
-  "Promotion and deal strategies built around real demand signals — not guesswork",
-  "Quarterly forecasting and live reporting that keeps every stakeholder aligned",
-  "Advertising and scaling strategies designed to grow revenue without eroding margin",
-];
-
 const headingStyle = {
   fontSize: "1.5rem",
   textTransform: "uppercase" as const,
@@ -164,21 +155,15 @@ export default function CommercePage() {
       {/* Why us */}
       <section className="section">
         <div className="container content-shell content-prose">
-          <h2 className="reveal" style={headingStyle}>
-            Why FMCG Brands Choose Dblshot for E-Commerce Management in Egypt
-          </h2>
-          <p className="reveal">
-            We are not a generalist digital agency. Dblshot is a performance marketing agency
-            specializing in FMCG e-commerce management across Egyptian and Saudi Arabian
-            marketplaces. Our team has direct expertise in Amazon Egypt, Noon, Talabat Mart,
-            HungerStation, and Breadfast — so we understand the platform mechanics, category
-            dynamics, and consumer behavior that actually drive sales in this market.
-          </p>
-          <ul className="checklist reveal">
-            {WHY.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          <Image
+            className="reveal"
+            src="/media/why-us/why-us-blue.png"
+            alt="Why choose Dblshot"
+            width={1256}
+            height={888}
+            style={{ width: "100%", height: "auto", borderRadius: "1.25rem" }}
+            sizes="(max-width: 800px) 100vw, 800px"
+          />
         </div>
       </section>
 
