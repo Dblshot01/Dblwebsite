@@ -78,7 +78,18 @@ export default function TechnologyPage() {
             sizes="(max-width: 800px) 100vw, 800px"
           />
 
-          <p className="reveal" style={{ color: "var(--ice)", marginTop: "2rem" }}>
+          <p
+            className="reveal"
+            style={{
+              fontFamily: "var(--font-display)",
+              fontWeight: 800,
+              textTransform: "uppercase",
+              letterSpacing: "-0.03em",
+              fontSize: "1.35rem",
+              color: "var(--brand-blue)",
+              marginTop: "2rem",
+            }}
+          >
             Deep Impact starts with the right digital presence. Let us help you build a website that
             looks stronger, works smarter, and converts better.
           </p>
