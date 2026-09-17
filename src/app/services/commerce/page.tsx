@@ -31,11 +31,15 @@ const PHASES = [
 ];
 
 const PLATFORMS = [
-  { name: "Amazon Egypt & KSA", detail: "Listings, ads, brand stores, A+ content" },
-  { name: "Noon", detail: "Sponsored products, brand store, catalog management" },
-  { name: "Breadfast", detail: "Hero banners, category promotions, catalog optimization" },
-  { name: "GoodsMart", detail: "Category ads, targeted promotions, sales acceleration" },
-  { name: "Botit, Rabbit, Talabat", detail: "New platform launches and catalog buildout" },
+  { name: "Amazon Egypt & KSA", detail: "Listings, ads, brand stores, A+ content", icons: ["/media/platforms/amazon.png"] },
+  { name: "Noon", detail: "Sponsored products, brand store, catalog management", icons: ["/media/platforms/noon.png"] },
+  { name: "Breadfast", detail: "Hero banners, category promotions, catalog optimization", icons: ["/media/platforms/breadfast.png"] },
+  { name: "GoodsMart", detail: "Category ads, targeted promotions, sales acceleration", icons: ["/media/platforms/goodsmart.png"] },
+  {
+    name: "Botit, Rabbit, Talabat",
+    detail: "New platform launches and catalog buildout",
+    icons: ["/media/platforms/botit.png", "/media/platforms/rabbit.png", "/media/platforms/talabat.png"],
+  },
 ];
 
 const COVERS = [
@@ -99,6 +103,11 @@ export default function CommercePage() {
           <div className="platforms reveal-stagger">
             {PLATFORMS.map((p) => (
               <div className="platform" key={p.name}>
+                <div className="platform__icons">
+                  {p.icons.map((icon) => (
+                    <Image key={icon} className="platform__icon" src={icon} alt="" aria-hidden="true" width={40} height={40} />
+                  ))}
+                </div>
                 <strong>{p.name}</strong>
                 <span>{p.detail}</span>
               </div>
