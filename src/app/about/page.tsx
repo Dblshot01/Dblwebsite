@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SiteProvider } from "@/components/layout/SiteProvider";
 import { AboutVideo } from "@/components/about/AboutVideo";
@@ -18,14 +19,30 @@ export default function AboutPage() {
   return (
     <SiteProvider activeNav="about" innerPage>
       <div className="about-page">
-        <LogoHero
-          id="about-hero"
-          title={
-            <>
-              Watch Our <span className="hero2__swap">Story</span>
-            </>
-          }
-        />
+        <section className="ads-banner-section">
+          <div className="ads-banner">
+            <Image
+              className="ads-banner__img"
+              src="/media/about/about-hero-banner.png"
+              alt="We didn't start as an agency. We started as operators tired of guesswork. This is DBLSHOT."
+              width={2780}
+              height={878}
+              priority
+              sizes="100vw"
+            />
+          </div>
+        </section>
+
+        <div className="hero-compact">
+          <LogoHero
+            id="about-hero"
+            title={
+              <>
+                Watch Our <span className="hero2__swap">Story</span>
+              </>
+            }
+          />
+        </div>
 
         <section className="section about-page__intro">
           <div className="container">

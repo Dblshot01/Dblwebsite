@@ -1353,6 +1353,12 @@ body {
   min-height: auto;
   padding: 2rem 0 1.5rem;
 }
+/* Same idea for the LogoHero (About page) — it normally stands alone as the
+   page's whole hero, so its min-height/padding is full-viewport sized too. */
+.about-page .hero-compact .hero2--compact {
+  min-height: auto;
+  padding: 2.5rem 0;
+}
 .page-hero::before {
   top: auto;
   right: clamp(1rem, 8vw, 9rem);

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SiteProvider } from "@/components/layout/SiteProvider";
 import { PageHero } from "@/components/ui/PageHero";
@@ -21,16 +22,33 @@ function formatMeta(tag: string): string {
 export default function CareersPage() {
   return (
     <SiteProvider activeNav="careers" innerPage>
-      <PageHero
-        label="Careers"
-        title={
-          <>
-            Join the <span className="text-gold">Impact</span>
-          </>
-        }
-        ctaLabel="See Open Roles"
-        ctaHref="#roles"
-      />
+      <section className="ads-banner-section">
+        <div className="ads-banner">
+          <Image
+            className="ads-banner__img"
+            src="/media/careers/careers-hero-banner.png"
+            alt="Talent isn't hired. It's grown, challenged, and trusted — this is where your career begins."
+            width={2780}
+            height={878}
+            priority
+            sizes="100vw"
+          />
+        </div>
+      </section>
+
+      <div className="hero-compact">
+        <PageHero
+          label="Join Us"
+          title={
+            <>
+              Join the <span className="text-gold">Impact</span>
+            </>
+          }
+          subtitle="Talent isn't hired. It's grown, challenged, and trusted. This is where your career begins."
+          ctaLabel="See Open Roles"
+          ctaHref="#roles"
+        />
+      </div>
 
       <section className="section" id="roles">
         <div className="container">

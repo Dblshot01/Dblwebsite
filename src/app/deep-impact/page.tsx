@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SiteProvider } from "@/components/layout/SiteProvider";
 import { PageHero } from "@/components/ui/PageHero";
 import { PageCTA } from "@/components/ui/PageCTA";
@@ -30,15 +31,31 @@ export default function DeepImpactPage() {
 
   return (
     <SiteProvider innerPage>
-      <PageHero
-        label="Deep Impact"
-        title={
-          <>
-            Deep <span className="text-gold">Impact</span>
-          </>
-        }
-        subtitle="The numbers we've moved, the brands behind them, and what we've learned along the way — case studies and insights in one place."
-      />
+      <section className="ads-banner-section">
+        <div className="ads-banner">
+          <Image
+            className="ads-banner__img"
+            src="/media/deep-impact/deep-impact-hero-banner.png"
+            alt="Results aren't claimed. They're proven, campaign by campaign — this is deep impact."
+            width={2780}
+            height={878}
+            priority
+            sizes="100vw"
+          />
+        </div>
+      </section>
+
+      <div className="hero-compact">
+        <PageHero
+          label="Case Studies"
+          title={
+            <>
+              Deep <span className="text-gold">Impact</span>
+            </>
+          }
+          subtitle="Results aren't claimed. They're proven, campaign by campaign. This is deep impact."
+        />
+      </div>
 
       {/* Headline numbers */}
       <section className="section section--glow">
