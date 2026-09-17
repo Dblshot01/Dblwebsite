@@ -153,24 +153,6 @@ export default function AboutPage() {
                 <span key={s}>{s}</span>
               ))}
             </div>
-
-            <div className="about-page__story content-prose">
-              <h3 className="reveal" style={{ fontSize: "1.05rem", textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--gold-text)", margin: "0 0 1rem" }}>
-                {JOURNEY.epilogueHeading}
-              </h3>
-              {JOURNEY.epilogue.map((p) => (
-                <p className="reveal" key={p.slice(0, 40)}>
-                  {p}
-                </p>
-              ))}
-            </div>
-
-            <p className="reveal" style={{ color: "var(--ice)", marginTop: "2.5rem", fontSize: "1.1rem" }}>
-              {JOURNEY.closing}
-            </p>
-            <p className="reveal text-gold" style={{ fontWeight: 800, fontSize: "1.25rem", marginTop: "0.5rem" }}>
-              {JOURNEY.signature}
-            </p>
           </div>
         </section>
 
@@ -189,6 +171,37 @@ export default function AboutPage() {
               ))}
             </div>
             <TeamGrid members={HOME_TEAM} />
+          </div>
+        </section>
+
+        {/* Closing note */}
+        <section className="section section--glow" id="closing-note">
+          <div className="container founder-note">
+            <div className="founder-note__photo">
+              <Image
+                src="/media/about/founder-note.png"
+                alt="Radwa Fathi, CEO of Dblshot"
+                width={1086}
+                height={1448}
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </div>
+            <div className="founder-note__content content-prose">
+              <h3 className="reveal" style={{ fontSize: "1.05rem", textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--gold-text)", margin: "0 0 1rem" }}>
+                {JOURNEY.epilogueHeading}
+              </h3>
+              {JOURNEY.epilogue.map((p) => (
+                <p className="reveal" key={p.slice(0, 40)}>
+                  {p}
+                </p>
+              ))}
+              <p className="reveal" style={{ color: "var(--ice)", marginTop: "2.5rem", fontSize: "1.1rem" }}>
+                {JOURNEY.closing}
+              </p>
+              <p className="reveal text-gold" style={{ fontWeight: 800, fontSize: "1.25rem", marginTop: "0.5rem" }}>
+                {JOURNEY.signature}
+              </p>
+            </div>
           </div>
         </section>
       </div>
