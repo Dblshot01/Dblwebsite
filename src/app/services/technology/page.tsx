@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { SiteProvider } from "@/components/layout/SiteProvider";
-import { PageHero } from "@/components/ui/PageHero";
 import { PageCTA } from "@/components/ui/PageCTA";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -46,15 +45,6 @@ export default function TechnologyPage() {
         </div>
       </section>
 
-      <PageHero
-        label="Website Development"
-        title={
-          <>
-            Website <span className="text-gold">Development</span>
-          </>
-        }
-        subtitle="Digital experiences that support growth, strengthen brand presence, and guide users toward action."
-      />
       <section className="section">
         <div className="container content-shell content-prose">
           <p className="reveal">
