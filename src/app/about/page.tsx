@@ -114,24 +114,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Meet the team */}
-        <section className="section about-page__team" id="team">
-          <div className="container">
-            <span className="section-label reveal">Meet the Minds</span>
-            <SectionHeading>
-              Behind the <span className="text-gold">Impact</span>
-            </SectionHeading>
-            <div className="about-page__team-intro">
-              {ABOUT_COPY.teamIntro.map((p) => (
-                <p key={p} className="reveal content-prose">
-                  {p}
-                </p>
-              ))}
-            </div>
-            <TeamGrid members={HOME_TEAM} />
-          </div>
-        </section>
-
         {/* Dblshot Journey Timeline */}
         <section className="section section--glow about-page__journey" id="journey">
           <div className="container">
@@ -189,6 +171,24 @@ export default function AboutPage() {
             <p className="reveal text-gold" style={{ fontWeight: 800, fontSize: "1.25rem", marginTop: "0.5rem" }}>
               {JOURNEY.signature}
             </p>
+          </div>
+        </section>
+
+        {/* Meet the team */}
+        <section className="section about-page__team" id="team">
+          <div className="container">
+            <span className="section-label reveal">Meet the Minds</span>
+            <SectionHeading>
+              Behind the <span className="text-gold">Impact</span>
+            </SectionHeading>
+            <div className="about-page__team-intro">
+              {ABOUT_COPY.teamIntro.map((p) => (
+                <p key={p} className="reveal content-prose">
+                  {p}
+                </p>
+              ))}
+            </div>
+            <TeamGrid members={HOME_TEAM} />
           </div>
         </section>
       </div>
