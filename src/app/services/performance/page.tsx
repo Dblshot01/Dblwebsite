@@ -11,10 +11,10 @@ export const metadata = createPageMetadata({
 });
 
 const CHANNELS = [
-  { name: "Meta Ads", detail: "Facebook & Instagram — awareness, conversion, and retargeting" },
-  { name: "Google Ads", detail: "Search, Shopping, Performance Max, and YouTube" },
-  { name: "TikTok Ads", detail: "Spark Ads and in-feed campaigns for reach and engagement" },
-  { name: "Snapchat Ads", detail: "Regional reach across Egypt and the GCC" },
+  { name: "Meta Ads", detail: "Facebook & Instagram — awareness, conversion, and retargeting", icon: "/media/icons/ad-platforms/meta.png" },
+  { name: "Google Ads", detail: "Search, Shopping, Performance Max, and YouTube", icon: "/media/icons/ad-platforms/google.jpg" },
+  { name: "TikTok Ads", detail: "Spark Ads and in-feed campaigns for reach and engagement", icon: "/media/icons/ad-platforms/tiktok.png" },
+  { name: "Snapchat Ads", detail: "Regional reach across Egypt and the GCC", icon: "/media/icons/ad-platforms/snapchat.jpg" },
 ];
 
 const WHAT_WE_DO = [
@@ -70,6 +70,7 @@ export default function PerformancePage() {
           <div className="platforms reveal-stagger">
             {CHANNELS.map((c) => (
               <div className="platform" key={c.name}>
+                <Image className="platform__icon" src={c.icon} alt="" aria-hidden="true" width={40} height={40} />
                 <strong>{c.name}</strong>
                 <span>{c.detail}</span>
               </div>

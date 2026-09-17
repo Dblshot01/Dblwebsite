@@ -993,13 +993,20 @@
 .platform {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   gap: 0.35rem 0.85rem;
   padding: 0.9rem 1.1rem;
   border: 1px solid var(--border);
   border-left: 3px solid rgba(255, 212, 0, 0.5);
   border-radius: 0.7rem;
   background: var(--glass);
+}
+.platform__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.6rem;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 .platform strong { color: var(--text-strong); font-size: 1rem; }
 .platform span { color: var(--muted); font-size: 0.9rem; }
