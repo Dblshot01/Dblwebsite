@@ -56,7 +56,22 @@ export default async function ServicePage({ params }: Props) {
               </ul>
             </>
           ) : null}
-          {service.closing ? <p className="reveal" style={{ color: "var(--ice)", marginTop: "2rem" }}>{service.closing}</p> : null}
+          {service.closing ? (
+            <p
+              className="reveal"
+              style={{
+                fontFamily: "var(--font-display)",
+                fontWeight: 800,
+                textTransform: "uppercase",
+                letterSpacing: "-0.03em",
+                fontSize: "1.35rem",
+                color: "var(--brand-blue)",
+                marginTop: "2rem",
+              }}
+            >
+              {service.closing}
+            </p>
+          ) : null}
           {extraSections.length > 0 ? <FramerProse sections={extraSections} /> : null}
         </div>
       </section>
