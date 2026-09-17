@@ -40,8 +40,8 @@ export default function BrandingPage() {
         <div className="ads-banner">
           <Image
             className="ads-banner__img"
-            src="/media/services/branding-banner-social.png"
-            alt="Social media that moves brands — Zeina, BEC, Spritz, Nourish, and Wingo Instagram profiles fanned out against a glowing tech backdrop."
+            src="/media/services/creative-hero-banner.png"
+            alt="Creative isn't decoration. It's the reason people stop scrolling — this is where attention turns into growth."
             width={2780}
             height={878}
             priority
@@ -50,15 +50,13 @@ export default function BrandingPage() {
         </div>
       </section>
 
-      <PageHero
-        label="Branding"
-        title={
-          <>
-            Full <span className="text-gold">Branding</span>
-          </>
-        }
-        subtitle="A complete, cohesive identity — distinctive, intentional, and built to last."
-      />
+      <div className="hero-compact">
+        <PageHero
+          label="Services"
+          title={<span className="text-gold">Creative</span>}
+          subtitle="Creative isn't decoration. It's the reason people stop scrolling. This is where attention turns into growth."
+        />
+      </div>
       <section className="section">
         <div className="container content-shell content-prose">
           <p className="reveal">

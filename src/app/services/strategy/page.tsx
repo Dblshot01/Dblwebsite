@@ -152,8 +152,8 @@ export default function StrategyPage() {
         <div className="ads-banner">
           <Image
             className="ads-banner__img"
-            src="/media/services/strategy-banner.png"
-            alt="Strategy before execution — a consultant reviewing market research dashboards covering target audience, competitive landscape, and brand positioning for Scommacce, Turkava, and other client engagements."
+            src="/media/services/strategy-hero-banner.png"
+            alt="Great brands aren't born. They're built, one bold move at a time — this is where yours begins."
             width={2780}
             height={878}
             priority
@@ -162,15 +162,17 @@ export default function StrategyPage() {
         </div>
       </section>
 
-      <PageHero
-        label="Strategy & Consultancy"
-        title={
-          <>
-            Strategy <span className="text-gold">& Consultancy</span>
-          </>
-        }
-        subtitle="Over a decade of brand strategy and market research — launches, rebrands, and go-to-market consultancy across Egypt, the GCC, and Africa."
-      />
+      <div className="hero-compact">
+        <PageHero
+          label="Services"
+          title={
+            <>
+              Strategy <span className="text-gold">& Consultancy</span>
+            </>
+          }
+          subtitle="Great brands aren't born. They're built. One bold move at a time. This is where yours begins."
+        />
+      </div>
 
       {/* Who we are */}
       <section className="section">

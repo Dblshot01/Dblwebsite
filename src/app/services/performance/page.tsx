@@ -43,8 +43,8 @@ export default function PerformancePage() {
         <div className="ads-banner">
           <Image
             className="ads-banner__img"
-            src="/media/services/performance-banner.png"
-            alt="Turn followers into loyal customers — a Meta Ads Manager dashboard with ROAS, SEO, CRO, and analytics panels alongside a live Spritz storefront."
+            src="/media/services/performance-hero-banner.png"
+            alt="Growth isn't guessed. It's engineered, tested, and proven daily — this is performance built to convert."
             width={2780}
             height={878}
             priority
@@ -53,15 +53,13 @@ export default function PerformancePage() {
         </div>
       </section>
 
-      <PageHero
-        label="Performance"
-        title={
-          <>
-            Growth <span className="text-gold">That Covers Its Own Costs</span>
-          </>
-        }
-        subtitle="Paid media across Meta, Google, TikTok, and Snapchat — structured, tested, and optimized daily around one goal: measurable growth."
-      />
+      <div className="hero-compact">
+        <PageHero
+          label="Services"
+          title={<span className="text-gold">Performance</span>}
+          subtitle="Growth isn't guessed. It's engineered, tested, and proven daily. This is performance built to convert."
+        />
+      </div>
 
       <section className="section">
         <div className="container content-shell content-prose">

@@ -1349,7 +1349,7 @@ body {
 /* Sits directly under a full-bleed banner that already anchors the page
    visually — the standard full-viewport min-height/padding above would
    just be dead space here, not a hero of its own. */
-.tech-hero-compact .page-hero {
+.hero-compact .page-hero {
   min-height: auto;
   padding: 2rem 0 1.5rem;
 }

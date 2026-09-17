@@ -74,8 +74,8 @@ export default function CommercePage() {
         <div className="ads-banner">
           <Image
             className="ads-banner__img"
-            src="/media/services/commerce-banner.png"
-            alt="Your brand belongs at the top of the shelf — Amazon, HungerStation, and noon storefronts connected around marketplace integration, store optimization, and sales growth."
+            src="/media/services/ecommerce-hero-banner.png"
+            alt="Your store isn't a website. It's your best salesperson, open 24/7 — this is e-commerce built to sell."
             width={2780}
             height={878}
             priority
@@ -84,16 +84,17 @@ export default function CommercePage() {
         </div>
       </section>
 
-      <PageHero
-        label="E-Commerce"
-        title={
-          <>
-            E-Commerce, Built for FMCG Brands That Want to{" "}
-            <span className="text-gold">Lead</span>
-          </>
-        }
-        subtitle="At Dblshot, we help FMCG brands build, optimize, and scale their presence across Egypt's and Saudi Arabia's biggest marketplaces — Amazon, Noon, Talabat Mart, HungerStation, Breadfast, and beyond. From catalogue optimization and A+ content to marketplace advertising and brand store development, we manage the full e-commerce ecosystem with one goal: turning your digital shelf into your strongest sales channel."
-      />
+      <div className="hero-compact">
+        <PageHero
+          label="Services"
+          title={
+            <>
+              E-<span className="text-gold">Commerce</span>
+            </>
+          }
+          subtitle="Your store isn't a website. It's your best salesperson, open 24/7. This is e-commerce built to sell."
+        />
+      </div>
 
       {/* About the service */}
       <section className="section">

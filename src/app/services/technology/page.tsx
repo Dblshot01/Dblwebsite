@@ -46,7 +46,7 @@ export default function TechnologyPage() {
         </div>
       </section>
 
-      <div className="tech-hero-compact">
+      <div className="hero-compact">
         <PageHero
           label="Website Development"
           title={

@@ -95,8 +95,8 @@ export default function AmazonGrowthPage() {
         <div className="ads-banner">
           <Image
             className="ads-banner__img"
-            src="/media/services/amazon-ads-banner-no-button.png"
-            alt="Amazon Ads that turn visibility into growth — an iSiS e-commerce performance dashboard alongside A+ content modules."
+            src="/media/services/amazon-growth-hero-banner.png"
+            alt="Rankings aren't luck. They're earned, listing by listing — this is Amazon growth built to dominate."
             width={2780}
             height={878}
             priority
@@ -105,18 +105,19 @@ export default function AmazonGrowthPage() {
         </div>
       </section>
 
-      <PageHero
-        label="Amazon Growth"
-        title={
-          <>
-            Amazon Growth That Turns Visibility into{" "}
-            <span className="text-gold">Sales</span>
-          </>
-        }
-        subtitle="Most brands are on Amazon. The ones that grow are the ones that are managed. At Dblshot, we handle every layer of your Amazon presence across Egypt, Saudi Arabia, and the UAE — from listing health and catalogue optimization to full-funnel advertising and Brand Store development. We don't run accounts. We build Amazon growth engines."
-        ctaLabel="Start a Strategy Call"
-        ctaHref="/contact"
-      />
+      <div className="hero-compact">
+        <PageHero
+          label="Services"
+          title={
+            <>
+              Amazon <span className="text-gold">Growth</span>
+            </>
+          }
+          subtitle="Rankings aren't luck. They're earned, listing by listing. This is Amazon growth built to dominate."
+          ctaLabel="Start a Strategy Call"
+          ctaHref="/contact"
+        />
+      </div>
 
       <CaseStudyBar active="about" />
 
