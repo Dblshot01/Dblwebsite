@@ -27,7 +27,7 @@ export default function CareersPage() {
           <Image
             className="ads-banner__img"
             src="/media/careers/careers-hero-banner.png"
-            alt="Careers"
+            alt="Talent isn't hired. It's grown, challenged, and trusted — this is where your career begins."
             width={2780}
             height={878}
             priority
@@ -45,6 +45,7 @@ export default function CareersPage() {
             </>
           }
           hideTitle
+          subtitle="Talent isn't hired. It's grown, challenged, and trusted. This is where your career begins."
           ctaLabel="See Open Roles"
           ctaHref="#roles"
         />

@@ -36,7 +36,7 @@ export default function DeepImpactPage() {
           <Image
             className="ads-banner__img"
             src="/media/deep-impact/deep-impact-hero-banner.png"
-            alt="Deep Impact"
+            alt="Results aren't claimed. They're proven, campaign by campaign — this is deep impact."
             width={2780}
             height={878}
             priority
@@ -54,6 +54,7 @@ export default function DeepImpactPage() {
             </>
           }
           hideTitle
+          subtitle="Results aren't claimed. They're proven, campaign by campaign. This is deep impact."
         />
       </div>
 

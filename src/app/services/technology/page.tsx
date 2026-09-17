@@ -28,7 +28,7 @@ export default function TechnologyPage() {
           <Image
             className="ads-banner__img"
             src="/media/services/website-development-hero-banner.png"
-            alt="Website Development"
+            alt="A website isn't a brochure, it's your hardest working asset — this is web built to convert."
             width={2780}
             height={878}
             priority
@@ -46,6 +46,7 @@ export default function TechnologyPage() {
             </>
           }
           hideTitle
+          subtitle="Digital experiences that support growth, strengthen brand presence, and guide users toward action."
         />
       </div>
 
