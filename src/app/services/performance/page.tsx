@@ -99,7 +99,18 @@ export default function PerformancePage() {
             sizes="(max-width: 800px) 100vw, 800px"
           />
 
-          <p className="reveal" style={{ color: "var(--ice)", marginTop: "2rem" }}>
+          <p
+            className="reveal"
+            style={{
+              fontFamily: "var(--font-display)",
+              fontWeight: 800,
+              textTransform: "uppercase",
+              letterSpacing: "-0.03em",
+              fontSize: "1.35rem",
+              color: "var(--brand-blue)",
+              marginTop: "2rem",
+            }}
+          >
             Deep Impact starts with media that&apos;s built to perform. Let&apos;s put your budget
             where the results are.
           </p>
