@@ -44,6 +44,7 @@ export default function CareersPage() {
               Join the <span className="text-gold">Impact</span>
             </>
           }
+          hideTitle
           subtitle="Talent isn't hired. It's grown, challenged, and trusted. This is where your career begins."
           ctaLabel="See Open Roles"
           ctaHref="#roles"

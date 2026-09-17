@@ -10,9 +10,12 @@ type PageHeroProps = {
   /** Optional call-to-action rendered under the subtitle. */
   ctaLabel?: string;
   ctaHref?: string;
+  /** Keeps the h1 for SEO/accessibility but visually hides it — for pages
+   *  where the banner artwork above already shows this title as an image. */
+  hideTitle?: boolean;
 };
 
-export function PageHero({ label, title, subtitle, logo, logoAlt, ctaLabel, ctaHref }: PageHeroProps) {
+export function PageHero({ label, title, subtitle, logo, logoAlt, ctaLabel, ctaHref, hideTitle }: PageHeroProps) {
   return (
     <section className="page-hero">
       <div className="container">
@@ -22,7 +25,7 @@ export function PageHero({ label, title, subtitle, logo, logoAlt, ctaLabel, ctaH
           </span>
         ) : null}
         <span className="section-label reveal">{label}</span>
-        <h1 className="page-hero__title">
+        <h1 className={`page-hero__title${hideTitle ? " sr-only" : ""}`}>
           <span className="reveal-line">
             <span>{title}</span>
           </span>
