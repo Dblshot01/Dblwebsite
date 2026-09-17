@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiteProvider } from "@/components/layout/SiteProvider";
-import { PageHero } from "@/components/ui/PageHero";
 import { PageCTA } from "@/components/ui/PageCTA";
 import { JobIcon } from "@/components/ui/JobIcon";
 import { JOBS } from "@/lib/content/jobs";
@@ -35,21 +34,6 @@ export default function CareersPage() {
           />
         </div>
       </section>
-
-      <div className="hero-compact">
-        <PageHero
-          label="Join Us"
-          title={
-            <>
-              Join the <span className="text-gold">Impact</span>
-            </>
-          }
-          hideTitle
-          subtitle="Talent isn't hired. It's grown, challenged, and trusted. This is where your career begins."
-          ctaLabel="See Open Roles"
-          ctaHref="#roles"
-        />
-      </div>
 
       <section className="section" id="roles">
         <div className="container">

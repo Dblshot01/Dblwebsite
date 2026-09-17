@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { SiteProvider } from "@/components/layout/SiteProvider";
-import { PageHero } from "@/components/ui/PageHero";
 import { PageCTA } from "@/components/ui/PageCTA";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -41,14 +40,6 @@ export default function BrandingPage() {
         </div>
       </section>
 
-      <div className="hero-compact">
-        <PageHero
-          label="Services"
-          title={<span className="text-gold">Creative</span>}
-          hideTitle
-          subtitle="Creative isn't decoration. It's the reason people stop scrolling. This is where attention turns into growth."
-        />
-      </div>
       <section className="section">
         <div className="container content-shell content-prose">
           <h2 className="reveal" style={{ fontSize: "1.35rem", textTransform: "uppercase", margin: "0 0 1rem" }}>

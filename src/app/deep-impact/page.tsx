@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { SiteProvider } from "@/components/layout/SiteProvider";
-import { PageHero } from "@/components/ui/PageHero";
 import { PageCTA } from "@/components/ui/PageCTA";
 import { CaseStudyCard } from "@/components/ui/CaseStudyCard";
 import { BlogCard } from "@/components/ui/BlogCard";
@@ -44,19 +43,6 @@ export default function DeepImpactPage() {
           />
         </div>
       </section>
-
-      <div className="hero-compact">
-        <PageHero
-          label="Case Studies"
-          title={
-            <>
-              Deep <span className="text-gold">Impact</span>
-            </>
-          }
-          hideTitle
-          subtitle="Results aren't claimed. They're proven, campaign by campaign. This is deep impact."
-        />
-      </div>
 
       {/* Headline numbers */}
       <section className="section section--glow">

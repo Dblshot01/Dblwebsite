@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiteProvider } from "@/components/layout/SiteProvider";
-import { PageHero } from "@/components/ui/PageHero";
 import { PageCTA } from "@/components/ui/PageCTA";
 import { CaseStudyBar } from "@/components/ui/CaseStudyBar";
 import { createPageMetadata } from "@/lib/seo";
@@ -95,21 +94,6 @@ export default function AmazonGrowthPage() {
           />
         </div>
       </section>
-
-      <div className="hero-compact">
-        <PageHero
-          label="Services"
-          title={
-            <>
-              Amazon <span className="text-gold">Growth</span>
-            </>
-          }
-          hideTitle
-          subtitle="Rankings aren't luck. They're earned, listing by listing. This is Amazon growth built to dominate."
-          ctaLabel="Start a Strategy Call"
-          ctaHref="/contact"
-        />
-      </div>
 
       <CaseStudyBar active="about" />
 

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { SiteProvider } from "@/components/layout/SiteProvider";
-import { PageHero } from "@/components/ui/PageHero";
 import { PageCTA } from "@/components/ui/PageCTA";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -44,15 +43,6 @@ export default function PerformancePage() {
           />
         </div>
       </section>
-
-      <div className="hero-compact">
-        <PageHero
-          label="Services"
-          title={<span className="text-gold">Performance</span>}
-          hideTitle
-          subtitle="Growth isn't guessed. It's engineered, tested, and proven daily. This is performance built to convert."
-        />
-      </div>
 
       <section className="section">
         <div className="container content-shell content-prose">

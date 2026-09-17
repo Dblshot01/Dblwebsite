@@ -2,7 +2,6 @@ import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { SiteProvider } from "@/components/layout/SiteProvider";
-import { PageHero } from "@/components/ui/PageHero";
 import { ServiceIcon } from "@/components/ui/ServiceIcon";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -161,19 +160,6 @@ export default function StrategyPage() {
           />
         </div>
       </section>
-
-      <div className="hero-compact">
-        <PageHero
-          label="Services"
-          title={
-            <>
-              Strategy <span className="text-gold">& Consultancy</span>
-            </>
-          }
-          hideTitle
-          subtitle="Great brands aren't born. They're built. One bold move at a time. This is where yours begins."
-        />
-      </div>
 
       {/* Who we are */}
       <section className="section">

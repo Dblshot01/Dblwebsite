@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiteProvider } from "@/components/layout/SiteProvider";
-import { PageHero } from "@/components/ui/PageHero";
 import { PageCTA } from "@/components/ui/PageCTA";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -74,19 +73,6 @@ export default function CommercePage() {
           />
         </div>
       </section>
-
-      <div className="hero-compact">
-        <PageHero
-          label="Services"
-          title={
-            <>
-              E-<span className="text-gold">Commerce</span>
-            </>
-          }
-          hideTitle
-          subtitle="Your store isn't a website. It's your best salesperson, open 24/7. This is e-commerce built to sell."
-        />
-      </div>
 
       {/* About the service */}
       <section className="section">
