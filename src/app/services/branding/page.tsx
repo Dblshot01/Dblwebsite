@@ -60,8 +60,8 @@ export default function BrandingPage() {
       </div>
       <section className="section">
         <div className="container content-shell content-prose">
-          <h2 className="reveal" style={{ fontSize: "1.35rem", textTransform: "uppercase", margin: "0 0 1rem", color: "var(--text-strong)" }}>
-            Creative
+          <h2 className="reveal" style={{ fontSize: "1.35rem", textTransform: "uppercase", margin: "0 0 1rem" }}>
+            <span className="text-blue">Creative</span>
           </h2>
           <p className="reveal">
             At Dblshot, we believe a brand is more than a logo. It is the first impression a business
@@ -81,8 +81,8 @@ export default function BrandingPage() {
             things to the right people, every time they interact with your brand.
           </p>
 
-          <h2 className="reveal" style={{ fontSize: "1.35rem", textTransform: "uppercase", margin: "2.5rem 0 1rem", color: "var(--text-strong)" }}>
-            What&apos;s Included
+          <h2 className="reveal" style={{ fontSize: "1.35rem", textTransform: "uppercase", margin: "2.5rem 0 1rem" }}>
+            <span className="text-blue">What&apos;s</span> <span className="text-gold">Included</span>
           </h2>
           <ul className="checklist reveal">
             {WHATS_INCLUDED.map((item) => (
@@ -90,8 +90,8 @@ export default function BrandingPage() {
             ))}
           </ul>
 
-          <h2 className="reveal" style={{ fontSize: "1.35rem", textTransform: "uppercase", margin: "2.5rem 0 1rem", color: "var(--text-strong)" }}>
-            Why Partner with Us?
+          <h2 className="reveal" style={{ fontSize: "1.35rem", textTransform: "uppercase", margin: "2.5rem 0 1rem" }}>
+            <span className="text-blue">Why</span> <span className="text-gold">Partner with Us?</span>
           </h2>
           <ul className="checklist reveal">
             {WHY_PARTNER.map((item) => (
