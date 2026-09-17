@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { SiteProvider } from "@/components/layout/SiteProvider";
 import { ServiceIcon } from "@/components/ui/ServiceIcon";
 import { PageCTA } from "@/components/ui/PageCTA";
@@ -14,12 +15,12 @@ export const metadata = createPageMetadata({
   path: "/services/strategy",
 });
 
-const SERVICES: { title: string; desc: string; icon: ServiceIconName }[] = [
-  { title: "Amazon Product Listings & Ads", desc: "We ensure your products stand out, increase visibility, and drive sales.", icon: "amazon" },
-  { title: "Marketing Strategies", desc: "We develop comprehensive strategies tailored to your brand's unique needs.", icon: "chart" },
-  { title: "Content Creation", desc: "We create high-quality content that resonates with your target audience.", icon: "research" },
-  { title: "Website Development & Optimization", desc: "We design, develop, and optimize websites for seamless experiences and higher conversions.", icon: "web" },
-  { title: "Social Media Management", desc: "We manage your social media presence to engage and grow your audience.", icon: "cart" },
+const SERVICES: { title: string; desc: string; icon: ServiceIconName; href: string }[] = [
+  { title: "Amazon Product Listings & Ads", desc: "We ensure your products stand out, increase visibility, and drive sales.", icon: "amazon", href: "/services/amazon-growth" },
+  { title: "Marketing Strategies", desc: "We develop comprehensive strategies tailored to your brand's unique needs.", icon: "chart", href: "/services/strategy" },
+  { title: "Content Creation", desc: "We create high-quality content that resonates with your target audience.", icon: "research", href: "/services/branding" },
+  { title: "Website Development & Optimization", desc: "We design, develop, and optimize websites for seamless experiences and higher conversions.", icon: "web", href: "/services/technology" },
+  { title: "Social Media Management", desc: "We manage your social media presence to engage and grow your audience.", icon: "cart", href: "/services/performance" },
 ];
 
 const STEPS = [
@@ -270,13 +271,19 @@ export default function StrategyPage() {
           </h2>
           <div className="services-grid services-grid--enhanced reveal-stagger">
             {SERVICES.map((s) => (
-              <article className="service-card" key={s.title}>
+              <Link className="service-card" href={s.href} key={s.title}>
                 <div className="service-card__icon">
                   <ServiceIcon name={s.icon} />
                 </div>
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
-              </article>
+                <span className="service-card__link">
+                  Learn more
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M4 12h15M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
