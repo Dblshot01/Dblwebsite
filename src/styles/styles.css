@@ -691,6 +691,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   font-style: italic;
   font-weight: 500;
 }
+.hero2__actions { display: flex; flex-wrap: wrap; gap: 1rem; }
 .hero2 .contact-badge.hero2__badge-contact { bottom: clamp(7.5rem, 14vw, 9.5rem); z-index: 3; }
 @media (max-width: 900px) {
   .hero2 .contact-badge.hero2__badge-contact { display: none; }
@@ -2234,7 +2235,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   border: 1px solid var(--ink);
   background:
     linear-gradient(135deg, rgb(236 224 126 / 0.18), transparent 46%),
-    rgb(var(--navy-900-rgb) / 0.52);
+    rgba(var(--navy-900-rgb), 0.52);
   box-shadow: 0 24px 52px rgb(26 21 16 / 0.1);
   transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s;
   isolation: isolate;

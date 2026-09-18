@@ -285,7 +285,7 @@
   z-index: -1;
   border: 1px solid var(--ink);
   border-radius: inherit;
-  background: rgb(var(--navy-900-rgb) / 0.72);
+  background: rgba(var(--navy-900-rgb), 0.72);
 }
 .reviews-summary strong {
   font-family: var(--font-display);
@@ -334,7 +334,7 @@
   border: 1px solid var(--ink);
   background:
     linear-gradient(135deg, rgb(236 224 126 / 0.16), transparent 42%),
-    rgb(var(--navy-900-rgb) / 0.64);
+    rgba(var(--navy-900-rgb), 0.64);
   box-shadow:
     0 0 0 0.28rem var(--navy-950),
     0 0 0 calc(0.28rem + 1px) var(--ink),
@@ -968,7 +968,7 @@
   padding: 0.22rem 0.56rem;
   border: 1px solid rgb(26 21 16 / 0.1);
   border-radius: 999px;
-  background: rgb(var(--navy-950-rgb) / 0.52);
+  background: rgba(var(--navy-950-rgb), 0.52);
   backdrop-filter: blur(14px) saturate(1.1);
   -webkit-backdrop-filter: blur(14px) saturate(1.1);
   box-shadow:
@@ -1135,7 +1135,7 @@ body:has(.hero2) .nav:not(.is-scrolled) .nav__dropdown a:focus-visible {
     align-items: center;
     justify-content: center;
     border-color: rgb(26 21 16 / 0.16);
-    background: rgb(var(--navy-950-rgb) / 0.56);
+    background: rgba(var(--navy-950-rgb), 0.56);
     backdrop-filter: blur(14px) saturate(1.08);
     -webkit-backdrop-filter: blur(14px) saturate(1.08);
     box-shadow:
@@ -1157,7 +1157,7 @@ body:has(.hero2) .nav:not(.is-scrolled) .nav__dropdown a:focus-visible {
     border-radius: 1.4rem;
     background:
       radial-gradient(circle at 20% 8%, rgb(236 224 126 / 0.34), transparent 34%),
-      rgb(var(--navy-950-rgb) / 0.82);
+      rgba(var(--navy-950-rgb), 0.82);
     backdrop-filter: blur(22px) saturate(1.05);
     -webkit-backdrop-filter: blur(22px) saturate(1.05);
     box-shadow: 0 24px 80px rgb(26 21 16 / 0.24);
@@ -1281,7 +1281,7 @@ body {
   padding: 0.38rem 0.7rem;
   border: 1px solid rgb(26 21 16 / 0.16);
   border-radius: 999px;
-  background: rgb(var(--navy-950-rgb) / 0.52);
+  background: rgba(var(--navy-950-rgb), 0.52);
   color: rgb(26 21 16 / 0.7);
   letter-spacing: 0.13em;
 }
@@ -1324,7 +1324,7 @@ body {
   border-bottom: 1px solid rgb(26 21 16 / 0.16);
   background:
     radial-gradient(circle at 78% 24%, rgb(236 224 126 / 0.44), transparent 24rem),
-    linear-gradient(180deg, rgb(var(--navy-900-rgb) / 0.72), rgb(var(--navy-950-rgb) / 0.38));
+    linear-gradient(180deg, rgba(var(--navy-900-rgb), 0.72), rgba(var(--navy-950-rgb), 0.38));
 }
 /* Sits directly under a full-bleed banner that already anchors the page
    visually — the standard full-viewport min-height/padding above would
@@ -1427,7 +1427,7 @@ body:has(.hero2) .hero2__wordmark .hero__swap {
   border-radius: 0.7rem;
   background:
     linear-gradient(180deg, rgb(253 249 236 / 0.24), rgb(223 225 209 / 0.2)),
-    rgb(var(--navy-950-rgb) / 0.34);
+    rgba(var(--navy-950-rgb), 0.34);
   box-shadow:
     0.32rem 0.32rem 0 rgb(26 21 16 / 0.08),
     0 18px 44px rgb(26 21 16 / 0.07);
@@ -1789,7 +1789,7 @@ body:has(.hero2) .hero2__wordmark .hero__swap {
   top: 4.6rem;
   border: 1px solid rgb(26 21 16 / 0.14);
   border-inline: 0;
-  background: rgb(var(--navy-950-rgb) / 0.78);
+  background: rgba(var(--navy-950-rgb), 0.78);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
@@ -1811,7 +1811,7 @@ a.case-bar__item:hover {
 .cs-stat {
   border: 1px solid rgb(26 21 16 / 0.18);
   border-radius: 0.62rem;
-  background: rgb(var(--navy-950-rgb) / 0.38);
+  background: rgba(var(--navy-950-rgb), 0.38);
 }
 .timeline::before,
 .timeline__progress {
@@ -1829,7 +1829,9 @@ a.case-bar__item:hover {
 .cookie-consent {
   border-color: rgb(26 21 16 / 0.16);
   border-radius: 0.7rem;
-  background: rgb(var(--navy-950-rgb) / 0.84);
+  background: rgba(var(--navy-950-rgb), 0.84);
+  backdrop-filter: blur(16px) saturate(1.05);
+  -webkit-backdrop-filter: blur(16px) saturate(1.05);
   color: var(--ink);
 }
 .chat-fab,
@@ -1842,7 +1844,7 @@ a.case-bar__item:hover {
 .chat-panel {
   border: 1px solid var(--ink);
   border-radius: 0.8rem;
-  background: rgb(var(--navy-950-rgb) / 0.94);
+  background: rgba(var(--navy-950-rgb), 0.94);
   color: var(--ink);
 }
 .chat-msg--assistant {
@@ -1945,7 +1947,7 @@ body:has(.hero2) .about-page .hero2__wordmark .hero2__swap {
 }
 @media (max-width: 620px) {
   .container {
-    width: min(100% - 1.25rem, 1280px);
+    width: min(100% - 2rem, 1280px);
   }
   .section-label,
   .page-hero .section-label {
@@ -1960,5 +1962,38 @@ body:has(.hero2) .about-page .hero2__wordmark .hero2__swap {
   }
   .page-cta__inner::before {
     inset: 0.65rem;
+  }
+}
+
+/* ── Phone layout pass ── */
+@media (max-width: 640px) {
+  .hero2__actions { gap: 0.65rem; }
+  .hero2__actions .btn { flex: 1 1 100%; justify-content: center; }
+
+  /* The photo's chart detail reads straight through the headline at this
+     width, so the scrim carries most of the contrast on phones. */
+  .hero2__scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(20, 15, 5, 0.42) 0%,
+      rgba(20, 15, 5, 0.34) 24%,
+      rgba(20, 15, 5, 0.76) 52%,
+      rgba(20, 15, 5, 0.9) 78%,
+      rgba(20, 15, 5, 0.94) 100%
+    );
+  }
+
+  /* The uppercase micro-labels bottomed out near 10px once the phone
+     step-downs stacked; hold them at a readable floor. */
+  .section-label,
+  .page-hero .section-label,
+  .blog-card__tag,
+  .case-study-card__badge,
+  .job-tag,
+  .pillar__kicker,
+  .mr-card__sector,
+  .cs-related__label,
+  .jrm-week__n {
+    font-size: 0.72rem;
   }
 }
