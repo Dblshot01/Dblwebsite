@@ -20,8 +20,6 @@ export default function AboutPage() {
   return (
     <SiteProvider activeNav="about" innerPage>
       <div className="about-page">
-        <PressFeature />
-
         <section className="ads-banner-section">
           <div className="ads-banner">
             <Image
@@ -63,6 +61,8 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        <PressFeature />
 
         {/* Mission & Vision */}
         <section className="section section--glow" id="mission">
