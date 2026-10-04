@@ -10,6 +10,7 @@ import { CtaMarquee } from "@/components/ui/CtaMarquee";
 import { ServiceIcon } from "@/components/ui/ServiceIcon";
 import { ImpactRoadmap } from "@/components/ui/ImpactRoadmap";
 import { TeamGrid } from "@/components/ui/TeamGrid";
+import { PressFeature } from "@/components/ui/PressFeature";
 import { PROVEN_STATS, DEEP_IMPACT_STATS, SERVICES } from "@/lib/content";
 import { HOME_BLOG_POSTS, HOME_TEAM, HOME, CLIENT_LOGOS } from "@/lib/content/home";
 import { clientName } from "@/lib/content/clients";
@@ -113,6 +114,8 @@ export function HomePage() {
           </div>
         </div>
       </section>
+
+      <PressFeature />
 
       {/* Proven Impact — big stat card + bento of client logo chips */}
       <section className="section section--glow" id="proven-impact">
