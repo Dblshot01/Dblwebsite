@@ -1345,6 +1345,7 @@ body {
 }
 .page-hero__title {
   max-width: 13ch;
+  text-wrap: balance;
   font-family: var(--font-display);
   font-weight: 900;
   letter-spacing: -0.055em;

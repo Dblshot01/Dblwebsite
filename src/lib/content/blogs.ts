@@ -13,8 +13,9 @@ export const BLOG_POSTS: BlogPostMeta[] = [
   {
     slug: "back-to-school-campaign",
     tag: "Back to School",
-    title: "+51% Units Sold in 14 Days: How We Won the BTS Campaign",
-    excerpt: "+51% Units Sold in 14 Days: How We Won the BTS Campaign",
+    title: "+51% Units Sold in 14 Days",
+    excerpt:
+      "How we built iSiS’s back-to-school campaign on Amazon, Talabat and Breadfast, from the offer to the final tap on “order.”",
     image: "/media/blogs/back-to-school-campaign.png",
   },
   {
