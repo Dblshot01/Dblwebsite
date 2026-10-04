@@ -104,6 +104,15 @@
   ],
   "blogPosts": [
     {
+      "tag": "Back to School",
+      "title": "How to Win Back to School on E-commerce: An FMCG Playbook From Our iSiS Campaign",
+      "excerpt": "How to Win Back to School on E-commerce: An FMCG Playbook From Our iSiS Campaign",
+      "image": "/media/blogs/back-to-school-campaign.png",
+      "slug": "back-to-school-campaign",
+      "isCaseStudy": false,
+      "caseStudySlug": null
+    },
+    {
       "tag": "Ecommerce",
       "title": "From Stage to Backstage: How the Gulf Outpaces Egypt in the E-commerce Play",
       "excerpt": "From Stage to Backstage: How the Gulf Outpaces Egypt in the E-commerce Play",

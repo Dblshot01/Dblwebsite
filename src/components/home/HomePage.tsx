@@ -19,8 +19,9 @@ import { getAllCaseStudies } from "@/lib/content/case-studies";
 const HOME_WORK_HIDDEN_SLUGS = new Set(["ltf", "zeina", "raw", "cimento-forca", "wingo"]);
 
 /** iSiS-Organic is already featured as a proper case study in the Case Studies
- *  grid above — this blog-post duplicate of it is redundant here. */
-const HOME_BLOG_HIDDEN_SLUGS = new Set(["isis-organic"]);
+ *  grid above — this blog-post duplicate of it is redundant here. The dessert
+ *  post drops off so the grid stays at one featured card plus two. */
+const HOME_BLOG_HIDDEN_SLUGS = new Set(["isis-organic", "egypt-dessert-market"]);
 
 /**
  * Most client logos are plain white cutouts that need to be forced to a dark
