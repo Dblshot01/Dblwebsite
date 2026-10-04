@@ -13,8 +13,8 @@ export const BLOG_POSTS: BlogPostMeta[] = [
   {
     slug: "back-to-school-campaign",
     tag: "Back to School",
-    title: "How to Win Back to School on E-commerce: An FMCG Playbook From Our iSiS Campaign",
-    excerpt: "How to Win Back to School on E-commerce: An FMCG Playbook From Our iSiS Campaign",
+    title: "+51% Units Sold in 14 Days: How We Won the BTS Campaign",
+    excerpt: "+51% Units Sold in 14 Days: How We Won the BTS Campaign",
     image: "/media/blogs/back-to-school-campaign.png",
   },
   {

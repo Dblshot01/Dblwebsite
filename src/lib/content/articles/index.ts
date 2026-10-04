@@ -3,8 +3,18 @@ import ramadanPreparation from "./ramadan-preparation.json";
 import egyptDessertMarket from "./egypt-dessert-market.json";
 import backToSchoolCampaign from "./back-to-school-campaign.json";
 
+export type ArticleFigure = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+  caption?: string;
+};
+
 export type ArticleSection = {
   heading: string | null;
+  /** Shown under the heading, before the paragraphs. */
+  figure?: ArticleFigure;
   paragraphs: string[];
 };
 
@@ -32,6 +42,7 @@ export function getArticleSections(slug: string): ArticleSection[] | undefined {
   if (!raw) return undefined;
   return raw.map((s) => ({
     heading: s.heading,
+    figure: s.figure,
     paragraphs: dedupeParagraphs(s.paragraphs),
   }));
 }

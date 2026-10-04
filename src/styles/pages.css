@@ -436,6 +436,20 @@
 .prose li { margin-bottom: 0.5rem; }
 .prose strong { color: var(--text-strong); }
 .prose a { color: var(--gold-text); text-decoration: underline; text-underline-offset: 3px; }
+.prose-figure { margin: 0 0 2rem; }
+.prose-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1.5px solid var(--ink);
+  border-radius: 0.5rem;
+}
+.prose-figure figcaption {
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
 
 .prose-layout {
   display: grid;
