@@ -7,16 +7,16 @@ type ArticleBodyProps = {
 
 function renderSection(section: ArticleSection, index: number) {
   return (
-    <div key={index}>
+    <div key={index} className="article-section">
       {section.heading ? <h2 className="reveal">{section.heading}</h2> : null}
       {section.figure ? (
-        <figure className="prose-figure reveal">
+        <figure className={`prose-figure${section.figure.layout === "side" ? " prose-figure--side" : ""} reveal`}>
           <Image
             src={section.figure.src}
             alt={section.figure.alt}
             width={section.figure.width}
             height={section.figure.height}
-            sizes="(min-width: 1024px) 780px, 100vw"
+            sizes={section.figure.layout === "side" ? "280px" : "(min-width: 1024px) 780px, 100vw"}
             priority={index === 0}
           />
           {section.figure.caption ? <figcaption>{section.figure.caption}</figcaption> : null}

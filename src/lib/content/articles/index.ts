@@ -9,6 +9,8 @@ export type ArticleFigure = {
   height: number;
   alt: string;
   caption?: string;
+  /** "side" floats a tall image beside the text instead of full width. */
+  layout?: "full" | "side";
 };
 
 export type ArticleSection = {
