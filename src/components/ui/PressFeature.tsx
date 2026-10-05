@@ -16,10 +16,10 @@ export function PressFeature() {
           aria-label="Read the full story on The CEO Network"
         >
           <Image
-            src="/media/about/ceo-magazine-feature.jpg"
-            alt="Radwa Fathi, CEO of Dblshot, featured by The CEO Network"
-            width={1600}
-            height={1067}
+            src="/media/about/women-ceo-network-feature.jpg"
+            alt="The Women CEO Network feature card: Radwa Fathi, The E-commerce Strategist"
+            width={1280}
+            height={853}
             sizes="(min-width: 900px) 55vw, 100vw"
           />
         </a>
