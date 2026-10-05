@@ -6,14 +6,22 @@ import { CaseStudyBar, type CaseTabKey } from "@/components/ui/CaseStudyBar";
 import { CASE_STUDY_LOGOS } from "@/lib/content/clients";
 
 export type CSStat = { value: string; label: string; icon?: string };
-export type CSGalleryImage = { src: string; alt: string; width: number; height: number };
+export type CSFigure = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  caption?: string;
+  /** Which side of the text the image sits on, on wider screens. */
+  side?: "left" | "right";
+};
 export type CSSection = {
   heading: string;
   paragraphs?: string[];
   bullets?: string[];
   stats?: CSStat[];
-  /** Work samples shown side by side under the section. */
-  gallery?: CSGalleryImage[];
+  /** A work sample shown beside the section's text. */
+  figure?: CSFigure;
 };
 export type CSSwatch = { name: string; hex: string };
 export type CSRelated = { label: string; href: string };
@@ -162,6 +170,18 @@ export function CaseStudyDetail({ spec }: { spec: CaseStudySpec }) {
           {spec.sections.map((sec, i) => (
             <div className="cs-block" key={i}>
               <h2 className="reveal cs-block__heading">{sec.heading}</h2>
+              {sec.figure ? (
+                <figure className={`cs-figure cs-figure--${sec.figure.side ?? "right"} reveal`}>
+                  <Image
+                    src={sec.figure.src}
+                    alt={sec.figure.alt}
+                    width={sec.figure.width}
+                    height={sec.figure.height}
+                    sizes="300px"
+                  />
+                  {sec.figure.caption ? <figcaption>{sec.figure.caption}</figcaption> : null}
+                </figure>
+              ) : null}
               {sec.paragraphs?.map((p, j) => (
                 <p className="reveal cs-block__p" key={j}>
                   {p}
@@ -175,20 +195,6 @@ export function CaseStudyDetail({ spec }: { spec: CaseStudySpec }) {
                 </ul>
               ) : null}
               {sec.stats ? <StatRow stats={sec.stats} /> : null}
-              {sec.gallery ? (
-                <div className="cs-gallery reveal-stagger">
-                  {sec.gallery.map((img) => (
-                    <Image
-                      key={img.src}
-                      src={img.src}
-                      alt={img.alt}
-                      width={img.width}
-                      height={img.height}
-                      sizes="(min-width: 760px) 33vw, 100vw"
-                    />
-                  ))}
-                </div>
-              ) : null}
             </div>
           ))}
 

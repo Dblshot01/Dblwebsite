@@ -33,6 +33,13 @@ const spec: CaseStudySpec = {
   sections: [
     {
       heading: "Overview",
+      figure: {
+        src: "/media/case-studies/bec/bec-expo-2030-pump.jpg",
+        alt: "BEC LinkedIn post “Powering Progress. Building Tomorrow.”: a BEC concrete pump at the EXPO 2030 site in Riyadh",
+        width: 1080,
+        height: 1350,
+        caption: "BEC’s concrete pump at the EXPO 2030 site, Riyadh.",
+      },
       paragraphs: [
         "BEC Concrete Solutions is a Saudi-based concrete solutions provider established in 2014, delivering ready-mix concrete and precast solutions across the Kingdom.",
         "With a focus on quality, reliability, and operational excellence, BEC supports major construction projects through advanced capabilities and expertise. The brand partnered with Dblshot to strengthen its digital presence and showcase the expertise behind every project.",
@@ -40,6 +47,14 @@ const spec: CaseStudySpec = {
     },
     {
       heading: "The Challenge",
+      figure: {
+        src: "/media/case-studies/bec/bec-meet-our-team.jpg",
+        alt: "BEC LinkedIn post “Meet Our Team” introducing HR Team Leader Sara Alzenaidi",
+        width: 800,
+        height: 1000,
+        caption: "“Meet Our Team”: putting BEC’s people at the front of the story.",
+        side: "left",
+      },
       bullets: [
         "Establishing BEC Concrete Solutions as a distinct brand, with a clear identity and presence independent from BEC Arabia",
         "Building a stronger digital presence that reflects BEC's capabilities, expertise, and project experience",
@@ -68,26 +83,13 @@ const spec: CaseStudySpec = {
         "Fleet & Site Branding — applying BEC's identity across mixer trucks and operational assets to enhance brand visibility in the market",
         "Brand Consistency — establishing a unified communication style across digital and physical brand experiences",
       ],
-      gallery: [
-        {
-          src: "/media/case-studies/bec/bec-behind-the-pour.jpg",
-          alt: "BEC LinkedIn post “Behind the Pour”: a concrete pour at sunset in Riyadh, with callouts for mix design, temperature, timing, logistics, quality control and people",
-          width: 1080,
-          height: 1350,
-        },
-        {
-          src: "/media/case-studies/bec/bec-expo-2030-pump.jpg",
-          alt: "BEC LinkedIn post “Powering Progress. Building Tomorrow.”: a BEC concrete pump at the EXPO 2030 site in Riyadh",
-          width: 1080,
-          height: 1350,
-        },
-        {
-          src: "/media/case-studies/bec/bec-meet-our-team.jpg",
-          alt: "BEC LinkedIn post “Meet Our Team” introducing HR Team Leader Sara Alzenaidi",
-          width: 800,
-          height: 1000,
-        },
-      ],
+      figure: {
+        src: "/media/case-studies/bec/bec-behind-the-pour.jpg",
+        alt: "BEC LinkedIn post “Behind the Pour”: a concrete pour at sunset in Riyadh, with callouts for mix design, temperature, timing, logistics, quality control and people",
+        width: 1080,
+        height: 1350,
+        caption: "“Behind the Pour”: the process behind every project, told for LinkedIn.",
+      },
     },
     {
       heading: "The Result",
