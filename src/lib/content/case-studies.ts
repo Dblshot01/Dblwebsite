@@ -18,9 +18,15 @@ export type CaseStudyCard = {
 /** Case studies not yet published — shown as "Coming Soon" and not clickable. */
 const COMING_SOON = new Set<string>([]);
 
-const CARD_META: Record<string, Pick<CaseStudyCard, "image" | "imageFit" | "metrics">> = {
+/** `tag` replaces the subtitle on the card's label pill when the full subtitle
+ *  is too long to fit there in two lines. */
+const CARD_META: Record<
+  string,
+  Pick<CaseStudyCard, "image" | "imageFit" | "metrics"> & { tag?: string }
+> = {
   "isis-organic": {
     image: "/media/case-studies/isis-teas.jpg",
+    tag: "From zero to e-commerce leader",
     metrics: [
       { value: "245%", label: "E-commerce growth" },
       { value: "2,740%", label: "YOY Amazon sales" },
@@ -61,7 +67,8 @@ const CARD_META: Record<string, Pick<CaseStudyCard, "image" | "imageFit" | "metr
     ],
   },
   bec: {
-    image: "/media/case-studies/bec/bec-expo-2030-pump.jpg",
+    image: "/media/case-studies/bec/bec-card.jpg",
+    tag: "Brand building, online & on site",
     metrics: [
       { value: "487%", label: "LinkedIn page views" },
       { value: "132%", label: "Follower growth" },
@@ -85,7 +92,7 @@ export function getAllCaseStudies(): CaseStudyCard[] {
     return {
       slug: study.slug,
       title: study.title,
-      subtitle: study.subtitle,
+      subtitle: meta.tag ?? study.subtitle,
       excerpt: study.intro.slice(0, 180) + (study.intro.length > 180 ? "…" : ""),
       // Neutral fallback — must not carry any client's branding
       image: meta.image ?? "/media/case-studies/ecommerce/p17.jpg",

@@ -2367,11 +2367,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   filter: sepia(0.12) saturate(0.78) contrast(1.02) brightness(1.04);
   transition: transform 0.8s var(--ease-out-expo), filter 0.35s;
 }
-/* The card's rotated gold "peek" (.blog-card::before) is normally hidden
-   under a full-bleed cover photo. A contain-fit image is smaller than its
-   box, so the peek shows through around it — hide it here so these cards
-   read the same as the regular photo cards. */
-.case-study-card:has(.blog-card__img--contain)::before {
+/* Case study cards drop the blog card's rotated gold "peek" (.blog-card::before)
+   that sits behind the image and runs down behind the logo + label row. */
+.case-study-card::before {
   display: none;
 }
 .blog-card:hover .blog-card__img img {
