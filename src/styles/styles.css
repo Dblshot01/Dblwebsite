@@ -2276,6 +2276,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
     height: auto;
   }
 }
+/* Four cards: two by two on mid-size screens, one row on wide ones. */
+@media (min-width: 820px) {
+  .blogs-grid--four { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1100px) {
+  .blogs-grid--four { grid-template-columns: repeat(4, 1fr); }
+}
 .blog-card {
   position: relative;
   display: grid;
