@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import Link from "next/link";
 
-export type CaseTabKey = "about" | "isis-organic" | "spritz" | "rehana" | "sekem";
+export type CaseTabKey = "about" | "isis-organic" | "spritz" | "rehana" | "bec";
 
 type CaseTab = {
   key: CaseTabKey;
@@ -16,16 +16,16 @@ const CASE_TABS: CaseTab[] = [
   { key: "isis-organic", title: "ISIS Organic", sub: "Case Study", href: "/case-studies/isis-organic" },
   { key: "spritz", title: "Spritz", sub: "Case Study", href: "/case-studies/spritz" },
   { key: "rehana", title: "Rehana", sub: "Case Study", href: "/case-studies/rehana" },
-  { key: "sekem", title: "Sekem", sub: "Case Study", note: "Coming soon" },
+  { key: "bec", title: "BEC", sub: "Case Study", href: "/case-studies/bec" },
 ];
 
 /** Keys that have a real page — used by pages to decide whether to render the bar. */
-export const CASE_BAR_KEYS: CaseTabKey[] = ["isis-organic", "spritz", "rehana"];
+export const CASE_BAR_KEYS: CaseTabKey[] = ["isis-organic", "spritz", "rehana", "bec"];
 
 export function CaseStudyBar({ active, hide }: { active: CaseTabKey; hide?: CaseTabKey[] }) {
   const tabs = hide?.length ? CASE_TABS.filter((tab) => !hide.includes(tab.key)) : CASE_TABS;
   return (
-    <nav className="case-bar" aria-label="Amazon Ads case studies">
+    <nav className="case-bar" aria-label="Case studies">
       <div className="container case-bar__track">
         {tabs.map((tab, i) => {
           const isActive = tab.key === active;

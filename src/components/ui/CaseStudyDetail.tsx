@@ -6,11 +6,14 @@ import { CaseStudyBar, type CaseTabKey } from "@/components/ui/CaseStudyBar";
 import { CASE_STUDY_LOGOS } from "@/lib/content/clients";
 
 export type CSStat = { value: string; label: string; icon?: string };
+export type CSGalleryImage = { src: string; alt: string; width: number; height: number };
 export type CSSection = {
   heading: string;
   paragraphs?: string[];
   bullets?: string[];
   stats?: CSStat[];
+  /** Work samples shown side by side under the section. */
+  gallery?: CSGalleryImage[];
 };
 export type CSSwatch = { name: string; hex: string };
 export type CSRelated = { label: string; href: string };
@@ -38,6 +41,8 @@ export type CaseStudySpec = {
   sections: CSSection[];
   palette?: CSSwatch[];
   results?: CSStat[];
+  /** Small print under the results, e.g. the comparison period. */
+  resultsNote?: string;
   related: CSRelated[];
   caseBarActive?: CaseTabKey;
 };
@@ -170,6 +175,20 @@ export function CaseStudyDetail({ spec }: { spec: CaseStudySpec }) {
                 </ul>
               ) : null}
               {sec.stats ? <StatRow stats={sec.stats} /> : null}
+              {sec.gallery ? (
+                <div className="cs-gallery reveal-stagger">
+                  {sec.gallery.map((img) => (
+                    <Image
+                      key={img.src}
+                      src={img.src}
+                      alt={img.alt}
+                      width={img.width}
+                      height={img.height}
+                      sizes="(min-width: 760px) 33vw, 100vw"
+                    />
+                  ))}
+                </div>
+              ) : null}
             </div>
           ))}
 
@@ -199,6 +218,7 @@ export function CaseStudyDetail({ spec }: { spec: CaseStudySpec }) {
               Results
             </h2>
             <StatRow stats={spec.results} />
+            {spec.resultsNote ? <p className="cs-results-note reveal">{spec.resultsNote}</p> : null}
           </div>
         </section>
       ) : null}

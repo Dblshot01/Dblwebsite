@@ -17,7 +17,7 @@ import { clientName } from "@/lib/content/clients";
 import { getAllCaseStudies } from "@/lib/content/case-studies";
 
 /** Same shortlist as the Deep Impact page's "The Work" section. */
-const HOME_WORK_HIDDEN_SLUGS = new Set(["ltf", "zeina", "raw", "cimento-forca", "wingo"]);
+const HOME_WORK_HIDDEN_SLUGS = new Set(["ltf", "zeina", "raw", "cimento-forca", "wingo", "bec"]);
 
 /** iSiS-Organic is already featured as a proper case study in the Case Studies
  *  grid above — this blog-post duplicate of it is redundant here. */

@@ -60,6 +60,13 @@ const CARD_META: Record<string, Pick<CaseStudyCard, "image" | "imageFit" | "metr
       { value: "9+", label: "Product lines" },
     ],
   },
+  bec: {
+    image: "/media/case-studies/bec/bec-expo-2030-pump.jpg",
+    metrics: [
+      { value: "487%", label: "LinkedIn page views" },
+      { value: "132%", label: "Follower growth" },
+    ],
+  },
   zeina: {
     image: "/media/case-studies/logos/zeina.png",
     imageFit: "contain",

@@ -877,6 +877,27 @@
   line-height: 1.35;
 }
 
+.cs-gallery {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+@media (min-width: 760px) {
+  .cs-gallery { grid-template-columns: repeat(3, 1fr); align-items: start; }
+}
+.cs-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1.5px solid var(--ink);
+  border-radius: 0.75rem;
+}
+.cs-results-note {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
 .cs-stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

@@ -48,6 +48,7 @@ export const CASE_STUDY_LOGOS: Record<string, string> = {
   raw: "/media/case-studies/logos/raw-mark.png",
   wingo: "/media/case-studies/logos/wingo.png",
   zeina: "/media/case-studies/logos/zeina.png",
+  bec: "/media/case-studies/logos/bec.png",
 };
 
 /** Brand name for a logo path, or "" if not identified. */

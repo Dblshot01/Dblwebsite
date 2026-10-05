@@ -20,7 +20,7 @@ export const metadata = createPageMetadata({
 const BLOG_ORDER = ["back-to-school-campaign", "ecommerce", "ramadan-preparation", "egypt-dessert-market"];
 
 /** Hidden on this page only — /case-studies still lists the full set. */
-const HIDDEN_SLUGS = new Set(["ltf", "zeina", "raw", "cimento-forca", "wingo"]);
+const HIDDEN_SLUGS = new Set(["ltf", "zeina", "raw", "cimento-forca", "wingo", "bec"]);
 
 export default function DeepImpactPage() {
   const studies = getAllCaseStudies().filter((s) => !HIDDEN_SLUGS.has(s.slug));
