@@ -1226,7 +1226,9 @@ body {
 .section::after {
   content: "";
   position: absolute;
-  inset: 1.5rem clamp(1.25rem, 5vw, 2.75rem);
+  /* Sits in the gutter beside the container, never through the copy: the
+     inline inset shrinks as the viewport closes in on the 1280px container. */
+  inset: 1.5rem clamp(0.4rem, calc((100vw - 1280px) / 2 - 1.2rem), 2.75rem);
   z-index: 0;
   border: 1px solid rgb(26 21 16 / 0.1);
   border-radius: clamp(1rem, 2.4vw, 1.6rem);
@@ -2045,6 +2047,7 @@ body:has(.hero2) .about-page .hero2__wordmark .hero2__swap {
   .case-study-card__badge,
   .cs-related__label,
   time { font-size: 0.75rem; }
+  .about-page__copy { padding-inline: 0; }
   .svc-showcase__more,
   .cs-related__link,
   .text-gold--link {

@@ -1774,42 +1774,43 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 .roadmap__stop--right .roadmap__num { right: auto; left: -6px; }
 
-/* Under the weave's breakpoint the road straightens into a single column. */
+/* Narrow screens keep the same winding road, squeezed into the left of the
+   column; every label then reads to the right of it. The road SVG stretches
+   (preserveAspectRatio none), so shrinking its box shrinks the weave too and
+   --road-w remaps each stop's lane percentage onto that narrower box. */
 @media (max-width: 860px) {
   .roadmap {
-    height: auto;
-    padding-left: calc(var(--marker) / 2);
+    --road-w: 0.4;
+    --marker: 46px;
+    --row-h: 168px;
   }
-  .roadmap__road,
-  .roadmap__trail { display: none; }
-  .roadmap__stops {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.75rem, 5vw, 2.5rem);
+  .roadmap__road--bed,
+  .roadmap__trail {
+    right: auto;
+    width: calc(var(--road-w) * 100%);
   }
-  .roadmap__stops::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    bottom: 8px;
-    left: calc(var(--marker) / 2);
-    width: 2px;
-    background: linear-gradient(180deg, var(--gold) 0%, var(--gold-dim) 92%, transparent);
-  }
+  .roadmap__asphalt { stroke-width: 9px; }
   .roadmap__stop,
   .roadmap__stop--left,
   .roadmap__stop--right {
-    position: relative;
-    top: auto;
-    left: auto;
+    left: 0;
     right: auto;
-    transform: none;
-    width: auto;
+    width: 100%;
+    transform: translateY(-50%);
     flex-direction: row;
     text-align: left;
+    gap: 0;
   }
+  .roadmap__marker {
+    position: absolute;
+    left: calc(var(--x) * var(--road-w));
+    top: 50%;
+    translate: -50% -50%;
+  }
+  .roadmap__stop:hover .roadmap__marker { transform: none; }
+  .roadmap__num { width: 22px; height: 22px; font-size: 0.62rem; }
   .roadmap__stop--right .roadmap__num { right: -6px; left: auto; }
+  .roadmap__content { margin-left: calc(var(--road-w) * 100% + 1.1rem); padding-right: 0.25rem; }
 }
 
 .process-step__title {
