@@ -1998,3 +1998,58 @@ body:has(.hero2) .about-page .hero2__wordmark .hero2__swap {
     font-size: 0.72rem;
   }
 }
+
+/* ── Phone readability + tap-target floor ──
+   Keeps the desktop design intact; only lifts sub-12px text and
+   sub-40px links so phones get the same content at a comfortable size. */
+@media (max-width: 640px) {
+  .roadmap__num,
+  .blog-card__cta,
+  .reviews-summary__meta,
+  .case-bar__note,
+  .form-card__step,
+  .form-field__legend,
+  .form-field label,
+  .footer h5,
+  dt {
+    font-size: 0.75rem;
+  }
+  .btn { font-size: 0.85rem; }
+
+  .mobile-menu__sub a,
+  .mobile-menu__group > a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .footer li { margin-bottom: 0; }
+  .footer a:not(.btn) {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+  }
+  .chat-panel__close { width: 40px; height: 40px; }
+  .chat-link,
+  .chat-live__item,
+  .chat-suggestions button,
+  .chat-suggestions a {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .cookie-consent a,
+  .cookie a { display: inline-block; padding-block: 0.5rem; }
+  .section-label,
+  .page-hero .section-label,
+  .blog-card__tag,
+  .case-study-card__badge,
+  .cs-related__label,
+  time { font-size: 0.75rem; }
+  .svc-showcase__more,
+  .cs-related__link,
+  .text-gold--link {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
