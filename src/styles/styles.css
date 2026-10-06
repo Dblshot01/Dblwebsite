@@ -747,10 +747,15 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   pointer-events: none;
   overflow: hidden;
 }
-/* Under a logo banner the strip sits below it instead of overlapping, which
-   would cut off the bottom of the logos. */
+/* Under a logo banner the strip sits below it instead of overlapping by
+   70-96px, which would cut off the bottom of the logos. Its tilted bands also
+   rise past the top of the box on the right, where the box's clipping sliced
+   them flat (the photo heroes hid that); so clip sideways only and let the
+   tilted ends show, bleeding a few pixels over the banner's bottom edge. */
 .ads-banner-section + .ticker-cross {
   margin-top: clamp(0.5rem, 2vw, 1.25rem);
+  overflow-x: clip;
+  overflow-y: visible;
 }
 .ticker-band {
   position: absolute;
