@@ -104,8 +104,8 @@ const spec: CaseStudySpec = {
     },
   ],
   results: [
-    { value: "+487%", label: "LinkedIn page views" },
-    { value: "+132%", label: "LinkedIn followers" },
+    { value: "+487%", label: "LinkedIn page views", icon: "/media/platforms/linkedin.png" },
+    { value: "+132%", label: "LinkedIn followers", icon: "/media/platforms/linkedin.png" },
     { value: "+52.5%", label: "Impressions" },
     { value: "+84%", label: "Comments" },
   ],
