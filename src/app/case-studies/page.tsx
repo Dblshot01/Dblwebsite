@@ -3,6 +3,7 @@ import { PhotoHero } from "@/components/ui/PhotoHero";
 import { TickerCross } from "@/components/ui/TickerCross";
 import { PageCTA } from "@/components/ui/PageCTA";
 import { CaseStudyCard } from "@/components/ui/CaseStudyCard";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getAllCaseStudies } from "@/lib/content/case-studies";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -14,8 +15,16 @@ export const metadata = createPageMetadata({
 
 const HIDDEN_FROM_LISTING = new Set(["ltf"]);
 
+/** The headline case studies (same set as the homepage); everything else is
+ *  listed below them under "Other Companies". */
+const FEATURED_SLUGS = ["isis-organic", "spritz", "rehana", "bec"];
+
 export default function CaseStudiesPage() {
   const studies = getAllCaseStudies().filter((s) => !HIDDEN_FROM_LISTING.has(s.slug));
+  const featured = FEATURED_SLUGS.map((slug) => studies.find((s) => s.slug === slug)).filter(
+    (s): s is (typeof studies)[number] => Boolean(s),
+  );
+  const others = studies.filter((s) => !FEATURED_SLUGS.includes(s.slug));
 
   return (
     <SiteProvider innerPage>
@@ -35,19 +44,40 @@ export default function CaseStudiesPage() {
         items={["Real Growth", "Real Brands", "Amazon Wins", "E-Commerce Scale", "Proven Results", "FMCG Focus"]}
       />
 
-      <section className="section">
+      <section className="section" id="case-studies">
         <div className="container">
-          <p className="reveal content-prose" style={{ maxWidth: 640, color: "var(--muted)", marginBottom: "3rem" }}>
+          <SectionHeading center>
+            Case <span className="text-gold">Studies</span>
+          </SectionHeading>
+          <p className="reveal content-prose" style={{ maxWidth: 640, margin: "0 auto 3rem", textAlign: "center", color: "var(--muted)" }}>
             Real growth stories from FMCG brands we&apos;ve scaled across Amazon and e-commerce in Egypt and the
             GCC.
           </p>
-          <div className="blogs-grid reveal-stagger">
-            {studies.map((study) => (
+          <div className="blogs-grid blogs-grid--four reveal-stagger">
+            {featured.map((study) => (
               <CaseStudyCard key={study.slug} study={study} />
             ))}
           </div>
         </div>
       </section>
+
+      {others.length ? (
+        <section className="section section--glow" id="other-companies">
+          <div className="container">
+            <SectionHeading center>
+              Other <span className="text-gold">Companies</span>
+            </SectionHeading>
+            <p className="reveal content-prose" style={{ maxWidth: 640, margin: "0 auto 3rem", textAlign: "center", color: "var(--muted)" }}>
+              More brands we&apos;ve worked with, across branding, market entry and e-commerce.
+            </p>
+            <div className={`blogs-grid${others.length === 4 ? " blogs-grid--four" : ""} reveal-stagger`}>
+              {others.map((study) => (
+                <CaseStudyCard key={study.slug} study={study} />
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
       <PageCTA
         title="Your brand could be next"
         description="Let's replicate this impact for your FMCG brand."
