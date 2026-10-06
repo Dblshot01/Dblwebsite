@@ -24,6 +24,11 @@ const spec: CaseStudySpec = {
     { label: "Market", value: "Saudi Arabia" },
     { label: "Scope", value: "Company Profile + LinkedIn + Corporate & Fleet Branding" },
   ],
+  // 720p re-encode (8.7 MB, from a 141 MB master). preload "none" + a poster
+  // means nothing but the poster image loads until a visitor presses play.
+  heroVideo: "/media/case-studies/bec/bec-story.mp4",
+  heroVideoPoster: "/media/case-studies/bec/bec-story-poster.jpg",
+  heroVideoPreload: "none",
   heroStats: [
     { value: "16K", label: "LinkedIn page views (+487%)" },
     { value: "4K", label: "LinkedIn followers (+132%)" },

@@ -40,6 +40,10 @@ export type CaseStudySpec = {
   heroImage?: string;
   /** Shown in place of heroImage when set. heroImage doubles as its poster. */
   heroVideo?: string;
+  /** How much of heroVideo the browser fetches before play: "metadata" (default)
+   *  reads just the header; "none" fetches nothing until the visitor presses
+   *  play, for a long or heavy video. Pair "none" with a heroVideoPoster. */
+  heroVideoPreload?: "none" | "metadata";
   /** Poster for heroVideo. Falls back to the brand logo (CASE_STUDY_LOGOS)
    *  when unset — but object-fit:contain stretches a wide logo to fill the
    *  16:9 box, so a video poster generally wants its own pre-composed image
@@ -137,7 +141,7 @@ export function CaseStudyDetail({ spec }: { spec: CaseStudySpec }) {
                   poster={spec.heroVideoPoster || CASE_STUDY_LOGOS[spec.slug]}
                   controls
                   playsInline
-                  preload="metadata"
+                  preload={spec.heroVideoPreload ?? "metadata"}
                 />
               ) : (
                 <Image
