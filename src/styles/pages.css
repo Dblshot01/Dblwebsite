@@ -1093,23 +1093,26 @@
   height: auto;
 }
 
-/* Framed variant: the banner sits inside the page container as a rounded card
-   (matching the site's cards) instead of running edge to edge. The height cap
-   keeps it, and the strip below it, on the first screen on wide, short windows;
-   object-fit trims top and bottom only, where the logos aren't. */
-.ads-banner-section--framed { padding: clamp(1rem, 2.5vw, 2rem) 0 0; }
-.ads-banner-section--framed .ads-banner {
-  border: 1.5px solid var(--ink);
-  border-radius: clamp(0.75rem, 2vw, 1.5rem);
-  box-shadow:
-    0.4rem 0.4rem 0 rgb(236 224 126 / 0.55),
-    0 24px 50px -24px rgb(26 21 16 / 0.35);
-}
-.ads-banner-section--framed .ads-banner__img {
-  max-height: calc(100svh - 15rem);
+/* Hero variant: the banner fills the whole width and the first screen. The
+   outer panels of the artwork are flat cream (left) and black (right), so on
+   screens wider than the art's shape those two colours simply continue past
+   its edges, with no visible seam. The height is the art's natural height,
+   capped so the banner and the strip below it fit the window. */
+.ads-banner-section--hero { padding: 2rem 0 0; }
+.ads-banner--hero {
+  height: min(calc(100svh - 6rem), calc(100vw * 717 / 2000));
   min-height: 7rem;
-  object-fit: cover;
+  background: linear-gradient(90deg, #fcf9ef 50%, #000 50%);
+}
+.ads-banner--hero .ads-banner__img {
+  height: 100%;
+  object-fit: contain;
   object-position: 50% 50%;
+}
+/* On large screens the banner runs up behind the floating nav, like the photo
+   heroes; the logos sit in the middle band, clear of it. */
+@media (min-width: 1100px) {
+  .ads-banner-section--hero { padding: 0; margin-top: calc(var(--nav-h) * -1); }
 }
 
 /* ── Service page pillars (vertical, media-ready rows) ── */
