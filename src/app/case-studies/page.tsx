@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SiteProvider } from "@/components/layout/SiteProvider";
 import { PhotoHero } from "@/components/ui/PhotoHero";
 import { TickerCross } from "@/components/ui/TickerCross";
@@ -43,6 +44,19 @@ export default function CaseStudiesPage() {
       <TickerCross
         items={["Real Growth", "Real Brands", "Amazon Wins", "E-Commerce Scale", "Proven Results", "FMCG Focus"]}
       />
+
+      <section className="ads-banner-section">
+        <div className="ads-banner">
+          <Image
+            className="ads-banner__img"
+            src="/media/case-studies/brands-banner.webp"
+            alt="Brands we've worked with: Spritz, Wingo, BEC Concrete Solutions, iSiS and Raw Kettle Cooked Potatoes"
+            width={2000}
+            height={717}
+            sizes="100vw"
+          />
+        </div>
+      </section>
 
       <section className="section" id="case-studies">
         <div className="container">
