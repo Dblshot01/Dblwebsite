@@ -50,7 +50,7 @@ export function getCaseStudy(slug: string): CaseStudyPage | undefined {
   return CASE_STUDIES.find((s) => s.slug === slug);
 }
 
-const DEDICATED_CASE_STUDIES = new Set(["isis-organic", "spritz", "rehana", "raw", "cimento-forca", "wingo", "zeina"]);
+const DEDICATED_CASE_STUDIES = new Set(["isis-organic", "spritz", "rehana", "raw", "cimento-forca", "wingo", "zeina", "bec"]);
 
 export function getAllCaseStudySlugs(): string[] {
   return CASE_STUDIES.map((s) => s.slug).filter((s) => !DEDICATED_CASE_STUDIES.has(s));
