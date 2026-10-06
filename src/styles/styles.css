@@ -747,16 +747,25 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   pointer-events: none;
   overflow: hidden;
 }
-/* Under a logo banner the strip is pulled up by exactly how far its tilted
-   black band dips below the box at the left edge (4% of the box height plus
-   2.09vw, measured), so that end tucks under the banner's bottom edge and no
-   beige wedge shows there. The band's raised right end then bleeds over the
-   banner's empty lower part, as it does over a photo hero; the logos sit
-   above that. Clip sideways only, so the tilted ends aren't sliced flat. */
+/* Under a logo banner the strip is a single stacked ribbon: both bands tilt
+   the same way (-2deg) and sit flush, so no beige wedge opens between them.
+   (Tilted in opposite directions, as over a photo hero, they can only touch
+   at one point and leave a gap that widens to ~80px at the far edge.)
+   It is pulled up by how far the tilt drops its left end below its box,
+   0.5 x width x sin(2deg) = 1.75vw, plus 3px to tuck under the banner's
+   bottom edge, so no wedge shows there either; the raised right end bleeds
+   over the banner's empty lower part, clear of the logos. Clip sideways only,
+   so the tilted ends aren't sliced flat. */
 .ads-banner-section + .ticker-cross {
-  margin-top: calc(-1 * (clamp(120px, 18vw, 190px) * 0.04 + 2.09vw + 3px));
+  height: auto;
+  margin-top: calc(-1.75vw - 3px);
   overflow-x: clip;
   overflow-y: visible;
+}
+.ads-banner-section + .ticker-cross .ticker-band {
+  position: relative;
+  top: auto;
+  transform: rotate(-2deg);
 }
 .ticker-band {
   position: absolute;
