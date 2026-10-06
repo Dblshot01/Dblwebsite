@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SiteProvider } from "@/components/layout/SiteProvider";
 import { PageCTA } from "@/components/ui/PageCTA";
 import { CaseStudyCard } from "@/components/ui/CaseStudyCard";
@@ -75,6 +76,12 @@ export default function DeepImpactPage() {
             {studies.map((study) => (
               <CaseStudyCard key={study.slug} study={study} />
             ))}
+          </div>
+          {/* The rest of the case studies (RAW, Cimento Força, Wingo, Zeina, BEC…) live on /case-studies. */}
+          <div className="reveal" style={{ display: "flex", justifyContent: "center", marginTop: "2.5rem" }}>
+            <Link className="btn btn--white btn--lg" href="/case-studies">
+              View All Case Studies <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>
