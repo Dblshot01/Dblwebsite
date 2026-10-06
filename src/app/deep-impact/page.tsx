@@ -21,7 +21,7 @@ export const metadata = createPageMetadata({
 const BLOG_ORDER = ["back-to-school-campaign", "ecommerce", "ramadan-preparation", "egypt-dessert-market"];
 
 /** Hidden on this page only — /case-studies still lists the full set. */
-const HIDDEN_SLUGS = new Set(["ltf", "zeina", "raw", "cimento-forca", "wingo", "bec"]);
+const HIDDEN_SLUGS = new Set(["ltf", "zeina", "raw", "cimento-forca", "wingo"]);
 
 export default function DeepImpactPage() {
   const studies = getAllCaseStudies().filter((s) => !HIDDEN_SLUGS.has(s.slug));
@@ -77,7 +77,7 @@ export default function DeepImpactPage() {
               <CaseStudyCard key={study.slug} study={study} />
             ))}
           </div>
-          {/* The rest of the case studies (RAW, Cimento Força, Wingo, Zeina, BEC…) live on /case-studies. */}
+          {/* The rest of the case studies (RAW, Cimento Força, Wingo, Zeina…) live on /case-studies. */}
           <div className="reveal" style={{ display: "flex", justifyContent: "center", marginTop: "2.5rem" }}>
             <Link className="btn btn--white btn--lg" href="/case-studies">
               View All Case Studies <span aria-hidden="true">→</span>

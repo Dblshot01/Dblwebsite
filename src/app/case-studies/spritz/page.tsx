@@ -11,8 +11,6 @@ export const metadata = createPageMetadata({
 
 const spec: CaseStudySpec = {
   slug: "spritz",
-  bannerImage: "/media/case-studies/spritz-into-summer.jpg",
-  bannerAlt: "Spritz Into Summer — the full cooking-spray lineup styled in a beach picnic basket",
   category: "E-Commerce Management · Amazon Ads · Social Media",
   brand: (
     <>

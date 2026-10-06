@@ -91,7 +91,7 @@ export const CHAT_INTENTS: ChatIntent[] = [
     keywords: [
       "result", "results", "case study", "case studies", "proof", "portfolio",
       "success", "growth story", "examples", "clients", "isis", "spritz", "raw",
-      "rehana", "cimento", "wingo", "zeina",
+      "rehana", "cimento", "wingo", "zeina", "bec",
     ],
     answer:
       "See the numbers — 2,740% Amazon growth for ISIS Organic, 410% for Spritz, 370% for RAW, and more across our case studies.",
