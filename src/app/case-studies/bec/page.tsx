@@ -30,10 +30,10 @@ const spec: CaseStudySpec = {
   heroVideoPoster: "/media/case-studies/bec/bec-story-poster.jpg",
   heroVideoPreload: "none",
   heroStats: [
-    { value: "16K", label: "LinkedIn page views (+487%)" },
-    { value: "4K", label: "LinkedIn followers (+132%)" },
-    { value: "170.2K", label: "Impressions (+52.5%)" },
-    { value: "186", label: "Comments (+84%)" },
+    { value: "16K", label: "LinkedIn page views (+487%)", icon: "/media/platforms/linkedin.png" },
+    { value: "4K", label: "LinkedIn followers (+132%)", icon: "/media/platforms/linkedin.png" },
+    { value: "170.2K", label: "Impressions (+52.5%)", icon: "/media/platforms/linkedin.png" },
+    { value: "186", label: "Comments (+84%)", icon: "/media/platforms/linkedin.png" },
   ],
   sections: [
     {
@@ -104,10 +104,10 @@ const spec: CaseStudySpec = {
     },
   ],
   results: [
-    { value: "+487%", label: "LinkedIn page views" },
-    { value: "+132%", label: "LinkedIn followers" },
-    { value: "+52.5%", label: "Impressions" },
-    { value: "+84%", label: "Comments" },
+    { value: "+487%", label: "LinkedIn page views", icon: "/media/platforms/linkedin.png" },
+    { value: "+132%", label: "LinkedIn followers", icon: "/media/platforms/linkedin.png" },
+    { value: "+52.5%", label: "Impressions", icon: "/media/platforms/linkedin.png" },
+    { value: "+84%", label: "Comments", icon: "/media/platforms/linkedin.png" },
   ],
   resultsNote: "Compared with the previous 243 days.",
   related: [
