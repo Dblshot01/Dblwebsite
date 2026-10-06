@@ -72,7 +72,7 @@ export default function DeepImpactPage() {
           <SectionHeading center>
             Case <span className="text-gold">Studies</span>
           </SectionHeading>
-          <div className="blogs-grid reveal-stagger">
+          <div className="blogs-grid blogs-grid--four reveal-stagger">
             {studies.map((study) => (
               <CaseStudyCard key={study.slug} study={study} />
             ))}

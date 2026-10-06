@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getAllCaseStudies } from "@/lib/content/case-studies";
 import { createPageMetadata } from "@/lib/seo";
 
-const FEATURED_CASE_STUDY_SLUGS = new Set(["isis-organic", "spritz", "rehana"]);
+const FEATURED_CASE_STUDY_SLUGS = new Set(["isis-organic", "spritz", "rehana", "bec"]);
 
 export const metadata = createPageMetadata({
   title: "E-Commerce Agency in Egypt | Amazon, Noon & Marketplace Growth",
@@ -173,7 +173,7 @@ export default function CommercePage() {
           <SectionHeading center>
             Case <span className="text-gold">Studies</span>
           </SectionHeading>
-          <div className="blogs-grid reveal-stagger">
+          <div className="blogs-grid blogs-grid--four reveal-stagger">
             {getAllCaseStudies()
               .filter((study) => FEATURED_CASE_STUDY_SLUGS.has(study.slug))
               .map((study) => (
