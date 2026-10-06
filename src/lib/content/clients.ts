@@ -43,7 +43,7 @@ export const CLIENT_NAMES: Record<string, string> = {
  *  The /media/clients/ files are the desaturated set used by the marquee. */
 export const CASE_STUDY_LOGOS: Record<string, string> = {
   "isis-organic": "/media/case-studies/logos/isis-organic.png",
-  rehana: "/media/case-studies/logos/rehana.jpg",
+  rehana: "/media/case-studies/logos/rehana.png",
   spritz: "/media/clients/ibhVBT9CyJYkeU3S1xgOmYojaw.png",
   raw: "/media/case-studies/logos/raw-mark.png",
   wingo: "/media/case-studies/logos/wingo.png",

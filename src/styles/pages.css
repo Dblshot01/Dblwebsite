@@ -832,9 +832,8 @@
   align-items: center;
   justify-content: center;
   margin: 1.25rem 0 0.25rem;
-  padding: 0.7rem 1.1rem;
-  border-radius: 0.85rem;
-  background: rgba(255, 255, 255, 0.94);
+  /* No backing box: the logos are transparent PNGs, so they sit straight on
+     the page (a white box used to sit behind them). */
 }
 .cs-detail-hero__title {
   font-size: clamp(3rem, 10vw, 7rem);
@@ -1502,10 +1501,7 @@ a.case-bar__item:hover .case-bar__title { color: var(--text-strong); }
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
-  padding: 0.3rem 0.5rem;
-  background: rgba(var(--glass-rgb), 0.06);
-  border: 1px solid rgba(var(--glass-rgb), 0.1);
-  border-radius: 0.5rem;
+  /* No backing box or border: the logo sits directly on the card. */
 }
 .page-hero__logo {
   display: inline-flex;
