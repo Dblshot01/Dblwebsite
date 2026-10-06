@@ -29,17 +29,19 @@ export default function CaseStudiesPage() {
   return (
     <SiteProvider innerPage>
       <h1 className="sr-only">Case Studies</h1>
-      <section className="ads-banner-section">
-        <div className="ads-banner">
-          <Image
-            className="ads-banner__img"
-            src="/media/case-studies/brands-banner.webp"
-            alt="Brands we've worked with: Spritz, Wingo, BEC Concrete Solutions, iSiS and Raw Kettle Cooked Potatoes"
-            width={2000}
-            height={717}
-            priority
-            sizes="100vw"
-          />
+      <section className="ads-banner-section ads-banner-section--framed">
+        <div className="container">
+          <div className="ads-banner reveal">
+            <Image
+              className="ads-banner__img"
+              src="/media/case-studies/brands-banner.webp"
+              alt="Brands we've worked with: Spritz, Wingo, BEC Concrete Solutions, iSiS and Raw Kettle Cooked Potatoes"
+              width={2000}
+              height={717}
+              priority
+              sizes="(min-width: 1304px) 1280px, 100vw"
+            />
+          </div>
         </div>
       </section>
 
