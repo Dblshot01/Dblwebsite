@@ -66,7 +66,7 @@ export function HomeHero() {
             <Link className="btn btn--primary btn--lg" href="#service">
               Explore Services <span aria-hidden="true">→</span>
             </Link>
-            <Link className="btn btn--white btn--lg" href="/case-studies">
+            <Link className="btn btn--white btn--lg" href="/deep-impact#case-studies">
               View Case Studies <span aria-hidden="true">→</span>
             </Link>
             <Link className="btn btn--primary btn--lg" href="/contact">

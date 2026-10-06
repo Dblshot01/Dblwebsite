@@ -66,7 +66,7 @@ export default function DeepImpactPage() {
       </section>
 
       {/* Every case study */}
-      <section className="section">
+      <section className="section" id="case-studies">
         <div className="container">
           <SectionHeading center>
             Case <span className="text-gold">Studies</span>

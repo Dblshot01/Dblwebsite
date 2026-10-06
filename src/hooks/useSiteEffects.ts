@@ -224,7 +224,28 @@ export function useSiteEffects(options?: { home?: boolean }) {
       }
     }
 
+    /* Arriving on a page with an anchor (e.g. /deep-impact#case-studies): Lenis
+       starts at the top, cancelling the browser's own jump, so scroll to the
+       target once layout has settled. The section's scroll-margin-top keeps it
+       clear of the fixed nav. */
+    let hashTimeout: ReturnType<typeof setTimeout> | undefined;
+    let hashTarget: HTMLElement | null = null;
+    try {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      hashTarget = id ? document.getElementById(id) : null;
+    } catch {
+      hashTarget = null;
+    }
+    if (hashTarget) {
+      const target = hashTarget;
+      hashTimeout = setTimeout(() => {
+        if (lenis) lenis.scrollTo(target, { immediate: true });
+        else target.scrollIntoView();
+      }, 150);
+    }
+
     return () => {
+      if (hashTimeout) clearTimeout(hashTimeout);
       if (loadTimeout) clearTimeout(loadTimeout);
       if (finishLoad) window.removeEventListener("load", finishLoad);
       window.removeEventListener("scroll", onScroll);

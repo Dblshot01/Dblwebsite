@@ -36,6 +36,8 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: auto; }
+/* Anchor jumps (e.g. /deep-impact#case-studies) land clear of the fixed nav. */
+section[id] { scroll-margin-top: calc(var(--nav-h) + 1rem); }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
