@@ -97,8 +97,8 @@ export function getAllCaseStudies(): CaseStudyCard[] {
       // Neutral fallback — must not carry any client's branding
       image: meta.image ?? "/media/case-studies/ecommerce/p17.jpg",
       imageFit: meta.imageFit,
-      // Skip the small logo badge when the card image is already the logo itself.
-      logo: meta.imageFit === "contain" ? undefined : CASE_STUDY_LOGOS[study.slug],
+      // Skip the small logo badge only when the card image is the logo itself.
+      logo: meta.image === CASE_STUDY_LOGOS[study.slug] ? undefined : CASE_STUDY_LOGOS[study.slug],
       metrics: meta.metrics,
       comingSoon: COMING_SOON.has(study.slug),
     };
