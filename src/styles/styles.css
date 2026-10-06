@@ -747,6 +747,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   pointer-events: none;
   overflow: hidden;
 }
+/* Under a logo banner the strip sits below it instead of overlapping, which
+   would cut off the bottom of the logos. */
+.ads-banner-section + .ticker-cross {
+  margin-top: clamp(0.5rem, 2vw, 1.25rem);
+}
 .ticker-band {
   position: absolute;
   left: -6%;

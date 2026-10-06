@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { SiteProvider } from "@/components/layout/SiteProvider";
-import { PhotoHero } from "@/components/ui/PhotoHero";
 import { TickerCross } from "@/components/ui/TickerCross";
 import { PageCTA } from "@/components/ui/PageCTA";
 import { CaseStudyCard } from "@/components/ui/CaseStudyCard";
@@ -29,22 +28,7 @@ export default function CaseStudiesPage() {
 
   return (
     <SiteProvider innerPage>
-      <PhotoHero
-        id="case-studies-hero"
-        image="/media/case-studies/rehana-product-lineup.jpg"
-        objectPosition="50% 50%"
-        eyebrow="Our Work"
-        title={
-          <>
-            Client <span className="hero2__swap">Results</span>
-          </>
-        }
-        actions={[{ label: "Start Your Project", href: "/contact" }]}
-      />
-      <TickerCross
-        items={["Real Growth", "Real Brands", "Amazon Wins", "E-Commerce Scale", "Proven Results", "FMCG Focus"]}
-      />
-
+      <h1 className="sr-only">Case Studies</h1>
       <section className="ads-banner-section">
         <div className="ads-banner">
           <Image
@@ -53,10 +37,15 @@ export default function CaseStudiesPage() {
             alt="Brands we've worked with: Spritz, Wingo, BEC Concrete Solutions, iSiS and Raw Kettle Cooked Potatoes"
             width={2000}
             height={717}
+            priority
             sizes="100vw"
           />
         </div>
       </section>
+
+      <TickerCross
+        items={["Real Growth", "Real Brands", "Amazon Wins", "E-Commerce Scale", "Proven Results", "FMCG Focus"]}
+      />
 
       <section className="section" id="case-studies">
         <div className="container">
